@@ -44,9 +44,6 @@
                 grow.</p>
             <h2 class="hero-title">
                 Delivering <span class="title-highlight">IT Consulting</span> That Drives
-                <span class="title-results">Results</span>
-                <span class="title-results">efficiency</span>
-                <span class="title-results">Development</span>
             </h2>
         </section>
         <div class="pattern-bg">
@@ -56,42 +53,49 @@
             <!-- Left Services -->
             <div class="services-list">
                 <ul>
-                    <li class="service-item">Webflow development</li>
-                    <li class="service-item">Website design</li>
-                    <li class="service-item">Website Optimization</li>
-                    <li class="service-item">Content Marketing</li>
-                    <li class="service-item">UI/UX Research</li>
-                    <li class="service-item">Visual Identity</li>
+                    <li class="service-item-web">Webflow development</li>
+                    <li class="service-item-web">Website design</li>
+                    <li class="service-item-web">Website Optimization</li>
+                    <li class="service-item-web">Content Marketing</li>
+                    <li class="service-item-web">UI/UX Research</li>
+                    <li class="service-item-web">Visual Identity</li>
                 </ul>
             </div>
             <!-- Center Glow + Scroll -->
             <div class="results-wrapper">
                 <div class="results-bg">
-                    <!-- <span class="efficiency-text">Efficiency</span> -->
+                    <span class="rotating-text">Results</span>
+                    <span class="rotating-text">Efficiency</span>
+                    <span class="rotating-text">Development</span>
                 </div>
                 <button class="scroll-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
             <!-- Right Images -->
             <div class="image-collage-grid">
-                <div class="image-container-tall">
+                <!-- Left tall image -->
+                <div class="image-container-tall animate-img">
                     <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=400&fit=crop&crop=center"
                         alt="">
-                    <div class="overlay-card">NEW PRO</div>
                 </div>
-                <div class="image-container-small">
+
+                <!-- Top-right image -->
+                <div class="image-container-small top-right animate-img">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop&crop=center"
                         alt="">
                 </div>
-                <div class="image-container-small">
+
+                <!-- Bottom-right image -->
+                <div class="image-container-small bottom-right animate-img">
                     <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=400&fit=crop&crop=center"
                         alt="">
                 </div>
             </div>
+
         </section>
     </div>
     <!-- Section2 -->
@@ -169,12 +173,19 @@
                 Our mission is to align technology with your goals so you achieve efficiency,
                 scalability, and sustainable growth.
             </p>
-            <div class="arrow-btn">➜</div>
-            <div class="services-image">
-                <img src="https://i.ibb.co/mTgD2zQ/mobile-app.png" alt="Mobile App">
+            <div style="display: flex; justify-content: space-between;">
+                <div class="arrow-btn">➜</div>
+                <!-- Images -->
+                <div class="services-image">
+                    <img src="assets/images/our-story-img1.png" alt="Web Development">
+                    <img src="assets/images/our-story-img2.png" alt="Mobile App Development">
+                    <img src="assets/images/our-story-img3.png" alt="Software Development">
+                    <img src="assets/images/our-story-im4g.png" alt="QA Testing">
+                </div>
             </div>
         </div>
     </section>
+
     <!-- Section 4 -->
     <section class="technologies-section">
         <!-- Left Content -->
@@ -191,7 +202,7 @@
             <div class="arrow-btn">➜</div>
         </div>
 
-        <!-- Right Code Editor -->
+        <!-- Right Code/Images -->
         <div class="code-editor">
             <!-- Tabs -->
             <div class="tab-buttons">
@@ -202,22 +213,13 @@
                 <button>SvelteKit</button>
             </div>
 
-            <!-- Code Window -->
+            <!-- Dummy Images (replace with code blocks if needed) -->
             <div class="code-window">
-                <pre>
-<span class="import">import</span> { <span class="keyword">platformBrowserDynamic</span> } <span class="import">from</span> <span class="string">'@angular/platform-browser-dynamic'</span>;
-<span class="import">import</span> { AppModule } <span class="import">from</span> <span class="string">'./app/app.module'</span>;
-<span class="import">import</span> { tryLoadAndStartRecorder } <span class="import">from</span> <span class="string">'@alwaysmeticulc'</span>;
-
-<span class="keyword">async function</span> <span class="function">startApp</span>() {
-  <span class="keyword">if</span> (!isProduction()) {
-    <span class="keyword">await</span> tryLoadAndStartRecorder({
-      projectId: <span class="string">'...'</span>,
-      isProduction: <span class="boolean">false</span>,
-    });
-  }
-}
-</pre>
+                <img src="assets/images/project-name2.png" alt="NextJS Code">
+                <img src="assets/images/high-angle-hands-holding-paper 1.png" alt="React Code">
+                <img src="assets/images/vertical-carousel-img1.png" alt="Vue Code">
+                <img src="assets/images/project-name2.png" alt="Angular Code">
+                <img src="assets/images/project-name1.png" alt="SvelteKit Code">
             </div>
         </div>
     </section>
@@ -234,21 +236,33 @@
                 <img src="https://i.ibb.co/6ns4gLj/web-dev.jpg" alt="Web Development">
                 <h3>Web Development</h3>
                 <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
-                <div class="arrow-btn">➜</div>
+                <!-- Arrow + Explore wrapper -->
+                <div class="arrow-portfolio-btn">
+                    <span class="arrow">➜</span>
+                    <span class="text">Explore Now</span>
+                </div>
             </div>
 
             <div class="portfolio-card">
                 <img src="https://i.ibb.co/mTgD2zQ/mobile-app.png" alt="Apps Development">
                 <h3>Apps Development</h3>
                 <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
-                <div class="arrow-btn">➜</div>
+                <!-- Arrow + Explore wrapper -->
+                <div class="arrow-portfolio-btn">
+                    <span class="arrow">➜</span>
+                    <span class="text">Explore Now</span>
+                </div>
             </div>
 
             <div class="portfolio-card">
                 <img src="https://i.ibb.co/LxFGjSr/software-dev.jpg" alt="Software Development">
                 <h3>Software Development</h3>
                 <p>We deliver scalable, secure, and innovative IT solutions for businesses ready to grow.</p>
-                <div class="arrow-btn">➜</div>
+                <!-- Arrow + Explore wrapper -->
+                <div class="arrow-portfolio-btn">
+                    <span class="arrow">➜</span>
+                    <span class="text">Explore Now</span>
+                </div>
             </div>
         </div>
 
@@ -382,6 +396,79 @@
                     }
                 }]
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            let $items = $(".service-item");
+            let $images = $(".services-image img");
+            let current = 0;
+            let total = $items.length;
+
+            // Initialize
+            function showSlide(index) {
+                $items.removeClass("active").eq(index).addClass("active");
+                $images.removeClass("active").eq(index).addClass("active");
+            }
+
+            showSlide(current);
+
+            // Auto cycle
+            setInterval(function () {
+                current = (current + 1) % total;
+                showSlide(current);
+            }, 3000);
+
+            // Click handler
+            $items.on("click", function () {
+                current = $(this).index();
+                showSlide(current);
+            });
+
+        });
+    </script>
+    <!-- technologis js -->
+    <script>
+        $(document).ready(function () {
+
+            let $tabs = $(".tab-buttons button");
+            let $images = $(".code-window img");
+            let current = 0;
+            let total = $tabs.length;
+            let interval;
+
+            // Function to show a slide
+            function showSlide(index) {
+                $tabs.removeClass("active").eq(index).addClass("active");
+                $images.removeClass("active").eq(index).addClass("active");
+            }
+
+            // Start autoplay
+            function startAutoplay() {
+                interval = setInterval(function () {
+                    current = (current + 1) % total;
+                    showSlide(current);
+                }, 3000);
+            }
+
+            // Stop autoplay
+            function stopAutoplay() {
+                clearInterval(interval);
+            }
+
+            // Initialize
+            showSlide(current);
+            startAutoplay();
+
+            // Tab click
+            $tabs.on("click", function () {
+                stopAutoplay();
+                current = $(this).index();
+                showSlide(current);
+                startAutoplay();
+            });
+
         });
     </script>
 

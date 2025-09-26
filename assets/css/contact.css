@@ -2,9 +2,26 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #f97316, #9333ea);
-    padding: 30px;
+    /* padding: 30px; */
 }
 
+.section1 {
+    background: #fff;
+    border-radius: 16px;
+    /* display: flex; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 40px;
+    width: 92%;
+    margin: 40px auto;
+}
+
+.header {
+    padding: 0;
+}
+
+/* Contact Section */
 .contact-section {
     background: #fff;
     border-radius: 16px;
@@ -12,38 +29,47 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 40px;
+    gap: 40px;
 }
 
-/* ===== Marquee ===== */
+/********* Marquee */
 .marquee {
     overflow: hidden;
     white-space: nowrap;
-    position: relative;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     margin-bottom: 20px;
 }
 
 .marquee-content {
     display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 20s linear infinite;
+    animation: marquee-scroll 16s linear infinite;
 }
 
 .marquee-content span {
-    display: inline-block;
-    margin-right: 50px;
-    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* space between text and star */
+    margin-right: 60px;
+    font-size: 24px;
     font-weight: 600;
     color: #6b21a8;
 }
 
-@keyframes scroll-left {
+.star-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+@keyframes marquee-scroll {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
@@ -52,18 +78,14 @@ body {
 .contact-left {
     flex: 1;
     min-width: 350px;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
-.contact-info {
-    margin-bottom: 30px;
-}
-
-.contact-info h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #222;
+.contact-left h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .info-item {
@@ -76,19 +98,27 @@ body {
 }
 
 .info-item svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     stroke: #9333ea;
+    flex-shrink: 0;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
 }
 
 .info-item span {
-    font-weight: 500;
-    color: #9333ea;
+    font-weight: 600;
+    color: #f97316;
 }
 
 /* Slick Carousel */
 .carousel {
     width: 100%;
+    margin-top: 20px;
 }
 
 .carousel img {
@@ -178,4 +208,20 @@ textarea {
 
 .submit-btn:hover {
     opacity: 0.9;
+}
+
+/* Carouse settings */
+.carousel {
+    width: 100%;
+    height: 250px;
+    /* adjust to match your design */
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
 }

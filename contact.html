@@ -14,88 +14,193 @@
 </head>
 
 <body>
-
     <!-- Contact Section -->
-    <section class="contact-section">
-        <!-- Left Side -->
-        <div class="contact-left">
-            <div class="contact-info">
+    <section class="section1">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="./assets/images/HIREMATH LOGO VERSION 2 1.svg" alt="Logo" />
+            </div>
+            <nav class="navigation">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link active">About Us</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Portfolio</a>
+            </nav>
+            <button class="contact-btn">
+                Contact
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </header>
+        <div class="contact-section">
+            <!-- Left Side -->
+            <div class="contact-left">
                 <!-- Service Marquee -->
                 <div class="marquee">
-                    <div class="marquee-content">
-                        <span>Web Development</span>
-                        <span>Branding</span>
-                        <span>Software Development</span>
-                        <span>UI/UX Design</span>
-                        <span>SEO Optimization</span>
-                        <span>App Development</span>
-                        <span>Digital Marketing</span>
+                    <div class="marquee">
+                        <div class="marquee-content">
+                            <span>Web Development <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>Branding <img src="assets/images/star-icon.svg" alt="★" class="star-icon" /></span>
+                            <span>Software Development <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>UI/UX Design <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>SEO Optimization <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>App Development <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>Digital Marketing</span> <!-- last one no star -->
+
+                            <!-- repeat set for seamless infinite scroll -->
+                            <span>Web Development <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>Branding <img src="assets/images/star-icon.svg" alt="★" class="star-icon" /></span>
+                            <span>Software Development <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>UI/UX Design <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>SEO Optimization <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>App Development <img src="assets/images/star-icon.svg" alt="★"
+                                    class="star-icon" /></span>
+                            <span>Digital Marketing</span>
+                        </div>
                     </div>
+
                 </div>
+
                 <h3>Our team is here to help you. Contact us today.</h3>
+
+                <!-- Info -->
                 <div class="info-item">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3 5h2l3.6 7.59a1 1 0 00.92.61H17a1 1 0 00.92-.61L21 5H3z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M16 16a4 4 0 01-8 0" />
                     </svg>
-                    Call Anytime: <span>+91 7890 337 577</span>
+                    <div>
+                        <p>Call Anytime</p>
+                        <span>+91 7890 337 577</span>
+                    </div>
                 </div>
+
                 <div class="info-item">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0l4-4m-4 4l4 4" />
                     </svg>
-                    Send Mail Here: <span>12455@zxxd</span>
+                    <div>
+                        <p>Send Mail Here</p>
+                        <span>12455@zxxd</span>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Vertical Slick Carousel -->
-            <div class="carousel">
-                <div><img src="https://via.placeholder.com/500x350?text=Team+1" alt="Team 1"></div>
-                <div><img src="https://via.placeholder.com/500x350?text=Team+2" alt="Team 2"></div>
-                <div><img src="https://via.placeholder.com/500x350?text=Team+3" alt="Team 3"></div>
+                <!-- Vertical Slick Carousel -->
+                <div class="carousel">
+                    <div><img src="assets/images/vertical-carousel-img1.png" alt="Team 1"></div>
+                    <div><img src="assets/images/our-story-img2.png" alt="Team 2"></div>
+                    <div><img src="assets/images/our-story-img3.png" alt="Team 3"></div>
+                </div>
             </div>
-        </div>
-        <!-- Right Side -->
-        <div class="contact-right">
-            <h2>GET IN TOUCH</h2>
-            <p>For enquiries or any questions please do not hesitate to contact us.</p>
-            <form>
-                <div class="form-row">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="text" placeholder="Phone Number">
-                </div>
-                <input type="email" placeholder="E-Mail*" required>
-                <input type="text" placeholder="What Are You Interested In*" required>
-                <textarea placeholder="Type Your Message"></textarea>
-                <div class="checkbox-row">
-                    <input type="checkbox" id="policy">
-                    <label for="policy">By clicking the submit button, you agree to our <a href="#">privacy
-                            policy</a></label>
-                </div>
-                <button type="submit" class="submit-btn">Send →</button>
-            </form>
+            <!-- Right Side -->
+            <div class="contact-right">
+                <h2>GET IN TOUCH</h2>
+                <p>For enquiries or any questions please do not hesitate to contact us.</p>
+
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="text" placeholder="Phone Number">
+                    </div>
+                    <input type="email" placeholder="E-Mail*" required>
+                    <input type="text" placeholder="What Are You Interested In*" required>
+                    <textarea placeholder="Type Your Message"></textarea>
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">By clicking the submit button, you agree to our <a href="#">privacy
+                                policy</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send →</button>
+                </form>
+            </div>
         </div>
     </section>
+    <!-- Footer -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <h2>Subscribe for insights, service updates, and a closer look at the world</h2>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Enter Your Email" />
+                <button>
+                    Send <span>&#8594;</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <!-- Left: Address -->
+            <div class="footer-col">
+                <h3>Address</h3>
+                <p>
+                    H.No. 5-5-35/252/4/plot-23, At Durga Shakthipuram,<br />
+                    Prasanthi Nagar, IDA Kukatpally, Hyderabad, Telangana,<br />
+                    India-500072
+                </p>
+            </div>
+
+            <!-- Middle: Email -->
+            <div class="footer-col">
+                <h3>Email</h3>
+                <p>info@xyz.com<br />name@xyz.com</p>
+            </div>
+
+            <!-- Middle Large: Project CTA -->
+            <div class="footer-col project-cta">
+                <a href="#">Got A Project In Mind</a>
+            </div>
+
+            <!-- Right: Contact & Social -->
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>+91-9966326477</p>
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright 2025 xyz | All rights Reserved | Designed by ReyMould</p>
+        </div>
+    </footer>
 
     <!-- Slick Carousel JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <script>
         $(document).ready(function () {
             $('.carousel').slick({
-                vertical: true,
-                slidesToShow: 2,
+                vertical: true,           // vertical scrolling
+                slidesToShow: 1,          // one image visible
                 slidesToScroll: 1,
-                arrows: false,
-                dots: true,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                adaptiveHeight: true
+                autoplay: true,           // auto-scroll
+                autoplaySpeed: 2000,      // change every 2s
+                arrows: false,            // no arrows
+                dots: false,              // no dots
+                pauseOnHover: false,      // keep scrolling even on hover
+                infinite: true,           // loop infinitely
+                cssEase: 'linear',        // smooth scroll
+                speed: 800                // scroll speed
             });
         });
     </script>
+
 </body>
 
 </html>
