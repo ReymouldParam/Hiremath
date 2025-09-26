@@ -7,11 +7,10 @@
     <title>About </title>
     <link rel="stylesheet" href="./assets/css/global.css" />
     <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
 
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 
 <body>
@@ -21,7 +20,12 @@
             <div class="logo">
                 <img src="./assets/images/HIREMATH LOGO VERSION 2 1.svg" alt="Logo" />
             </div>
-            <nav class="navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="navigation" id="primary-nav">
                 <a href="./index.html" class="nav-link active">Home</a>
                 <a href="./about.html" class="nav-link">About Us</a>
                 <a href="./service.html" class="nav-link">Services</a>
@@ -30,8 +34,7 @@
             <button class="contact-btn">
                 Contact
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
         </header>
@@ -243,7 +246,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.portfolio-carousel').slick({
                 dots: true,
                 infinite: true,
@@ -255,27 +258,24 @@
                 arrows: true,
                 prevArrow: $('.slick-prev.custom-arrow'),
                 nextArrow: $('.slick-next.custom-arrow'),
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            arrows: false
-                        }
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
                     }
-                ]
+                }]
             });
 
             // Project arrow click
-            $('.project-arrow').click(function () {
+            $('.project-arrow').click(function() {
                 console.log('Project clicked');
             });
         });
-
     </script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             const content = {
                 next: {
                     img: "assets/images/nextjs.png",
@@ -304,7 +304,7 @@
                 }
             };
 
-            $(".tech-tab").on("click", function () {
+            $(".tech-tab").on("click", function() {
                 $(".tech-tab").removeClass("active");
                 $(this).addClass("active");
 
@@ -327,7 +327,6 @@
             // Initial show state
             $("#tech-image, #tech-title, #tech-desc").addClass("fade show");
         });
-
     </script>
 
     <script src="assets/header.js"></script>
