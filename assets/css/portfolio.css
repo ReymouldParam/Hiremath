@@ -57,7 +57,7 @@
     .contact-btn {
         padding: 8px 20px;
         border: 2px solid #7c3aed;
-        color: #7c3aed;
+        color: white;
         border-radius: 8px;
         text-decoration: none;
         display: flex;
@@ -199,12 +199,11 @@
         height: 60px;
     }
 
+    /**********************  Portfolio section */
     .portfolio-section {
-        /* max-width: 1200px; */
         margin: auto;
-        padding: 60px 20px;
-        /* background: linear-gradient(135deg, #1f2937 0%, #6b21a8 100%); */
-        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        padding: 60px 0px;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #6b21a8 100%);
     }
 
     .section-heading {
@@ -220,15 +219,12 @@
         margin-bottom: 80px;
     }
 
-    /* Top row with text + main image */
     .project-main {
         display: flex;
-        /* align-items: center; */
         justify-content: space-between;
         width: 95%;
         flex-wrap: wrap;
         margin: auto;
-        flex-wrap: wrap;
         margin-bottom: 2%;
     }
 
@@ -241,6 +237,8 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 15px;
+        color: white;
+        transition: all 0.3s ease;
     }
 
     .project-desc {
@@ -248,6 +246,8 @@
         line-height: 1.6;
         margin-bottom: 20px;
         color: #bbb;
+        width: 80%;
+        transition: all 0.3s ease;
     }
 
     .next-btn {
@@ -272,7 +272,6 @@
     }
 
     .project-media {
-        /* flex: 1; */
         min-width: 380px;
     }
 
@@ -280,22 +279,13 @@
         border-radius: 12px;
         overflow: hidden;
         position: relative;
-        /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); */
     }
 
     .featured-image img {
         width: 100%;
         display: block;
         height: 350px;
-        object-fit: cover
-    }
-
-    .gradient-bg::after {
-        content: "";
-        /* position: absolute; */
-        inset: 0;
-        background: linear-gradient(135deg, rgba(138, 43, 226, 0.5), rgba(0, 0, 0, 0.5));
-        z-index: 1;
+        object-fit: cover;
     }
 
     .thumb-row {
@@ -310,19 +300,26 @@
         flex: 1;
         min-width: 200px;
         text-align: center;
+        cursor: pointer;
     }
 
     .thumb img {
         width: 100%;
         border-radius: 12px;
         display: block;
-        height: 250px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .thumb img:hover {
+        transform: scale(1.05);
     }
 
     .thumb-title {
         margin-top: 10px;
-        font-size: 24px;
-        font-weight: 700;
+        font-size: 18px;
+        font-weight: 600;
         color: #fff;
         margin-bottom: 5%;
     }

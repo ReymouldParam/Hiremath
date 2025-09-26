@@ -3,7 +3,7 @@
       background: #f8fafc;
       border-radius: 40px;
       margin: 20px;
-      min-height: calc(100vh - 40px);
+      height: 100vh;
       position: relative;
       overflow: hidden;
   }
@@ -233,17 +233,7 @@
       right: 50px;
   }
 
-  /* Curved bottom section */
-  .hero-container::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100px;
-      background: linear-gradient(135deg, #1f2937 0%, #6b21a8 100%);
-      border-radius: 0 0 40px 40px;
-  }
+
 
   /* Responsive Design */
   @media (max-width: 768px) {
