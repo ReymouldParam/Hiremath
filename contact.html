@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Left Side -->
+        <div class="contact-left">
+            <div class="contact-info">
+                <!-- Service Marquee -->
+                <div class="marquee">
+                    <div class="marquee-content">
+                        <span>Web Development</span>
+                        <span>Branding</span>
+                        <span>Software Development</span>
+                        <span>UI/UX Design</span>
+                        <span>SEO Optimization</span>
+                        <span>App Development</span>
+                        <span>Digital Marketing</span>
+                    </div>
+                </div>
+                <h3>Our team is here to help you. Contact us today.</h3>
+                <div class="info-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 5h2l3.6 7.59a1 1 0 00.92.61H17a1 1 0 00.92-.61L21 5H3z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 16a4 4 0 01-8 0" />
+                    </svg>
+                    Call Anytime: <span>+91 7890 337 577</span>
+                </div>
+                <div class="info-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0l4-4m-4 4l4 4" />
+                    </svg>
+                    Send Mail Here: <span>12455@zxxd</span>
+                </div>
+            </div>
+
+            <!-- Vertical Slick Carousel -->
+            <div class="carousel">
+                <div><img src="https://via.placeholder.com/500x350?text=Team+1" alt="Team 1"></div>
+                <div><img src="https://via.placeholder.com/500x350?text=Team+2" alt="Team 2"></div>
+                <div><img src="https://via.placeholder.com/500x350?text=Team+3" alt="Team 3"></div>
+            </div>
+        </div>
+        <!-- Right Side -->
+        <div class="contact-right">
+            <h2>GET IN TOUCH</h2>
+            <p>For enquiries or any questions please do not hesitate to contact us.</p>
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Phone Number">
+                </div>
+                <input type="email" placeholder="E-Mail*" required>
+                <input type="text" placeholder="What Are You Interested In*" required>
+                <textarea placeholder="Type Your Message"></textarea>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="policy">
+                    <label for="policy">By clicking the submit button, you agree to our <a href="#">privacy
+                            policy</a></label>
+                </div>
+                <button type="submit" class="submit-btn">Send →</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                vertical: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+</body>
+
+</html>
