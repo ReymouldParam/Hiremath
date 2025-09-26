@@ -4,60 +4,9 @@
     background: #fff;
     border-radius: 20px;
     padding: 0;
-    height: 100vh;
+    height: 93vh;
     margin: 40px auto;
 }
-
-/* Header */
-/* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    z-index: 999;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.navigation {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    font-weight: 500;
-    color: #2d2d2d;
-    padding: 0.6rem 1.2rem;
-    border-radius: 12px;
-    transition: all 0.3s;
-}
-
-.nav-link.active {
-    background: #0a0a23;
-    color: #fff;
-}
-
-.contact-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.6rem 1.4rem;
-    border: 1.5px solid #9333ea;
-    color: #9333ea;
-    background: #fff;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact-btn:hover {
-    background: #9333ea;
-    color: #fff;
-} */
 
 /* About Section */
 .about-section {
@@ -127,7 +76,7 @@
     width: 100%;
     /* max-width: 450px; */
     display: block;
-    transform: translateY(15px);
+    transform: translateY(35px);
 }
 
 .tag {
@@ -184,6 +133,138 @@
     opacity: 0.3;
     z-index: -1;
 }
+
+/* ================= Animations ================= */
+
+/* Fade + Slide In from Left */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade + Zoom In from Bottom */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Tags Side-to-Side Floating */
+@keyframes floatSide {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(-15px);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(15px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Dotted Background Pulse */
+@keyframes pulseDots {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(10deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+}
+
+/* ================= Apply Animations ================= */
+
+/* Left content */
+.about-left h1,
+.about-left p,
+.about-left .btn {
+    opacity: 0;
+    animation: fadeInLeft 1s ease forwards;
+}
+
+.about-left h1 {
+    animation-delay: 0.2s;
+}
+
+.about-left p {
+    animation-delay: 0.5s;
+}
+
+.about-left .btn {
+    animation-delay: 0.8s;
+}
+
+/* Laptop image */
+.about-right img {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.6s;
+}
+
+/* Tags */
+.tag {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards, floatSide 4s ease-in-out infinite;
+}
+
+.tag.react {
+    animation-delay: 1s, 2s;
+}
+
+.tag.next {
+    animation-delay: 1.2s, 2.2s;
+}
+
+.tag.vue {
+    animation-delay: 1.4s, 2.4s;
+}
+
+.tag.angular {
+    animation-delay: 1.6s, 2.6s;
+}
+
+/* Background dots */
+.dotted-bg,
+.dotted-bg-left {
+    animation: pulseDots 6s ease-in-out infinite;
+}
+
 
 /* Our Story Section */
 
@@ -254,6 +335,7 @@
     border-radius: 16px;
     display: block;
 }
+
 
 /* ******************* Our Technologies */
 .technologies {
@@ -411,12 +493,33 @@
     max-width: 550px;
 }
 
-/* ******************* Our Portfolio */
+/***************** Fade effect */
+/* Fade animation */
+.fade {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure image fits */
+#tech-image {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+
+/* Portfolio Container */
 .portfolio-container {
     width: 100%;
-    padding: 2%;
     position: relative;
     background: linear-gradient(135deg, #111111, #2d0b59);
+    padding: 60px 0;
 }
 
 .portfolio-title {
@@ -426,10 +529,17 @@
     margin-bottom: 60px;
     line-height: 1.2;
     letter-spacing: -1px;
+    text-align: center;
+}
+
+/* Carousel Wrapper */
+.portfolio-carousel-wrapper {
+    position: relative;
 }
 
 .portfolio-carousel {
-    position: relative;
+    width: 96%;
+    margin: auto;
 }
 
 .project-card {
@@ -447,11 +557,14 @@
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
 }
 
-.project-image {
-    width: 100%;
+.innovation-image {
+    background: url('../images/project-name1.png') center/cover no-repeat;
     height: 350px;
-    object-fit: cover;
-    display: block;
+}
+
+.code-editor-image {
+    background: url('../images/project-name2.png') center/cover no-repeat;
+    height: 350px;
 }
 
 .project-content {
@@ -498,107 +611,71 @@
     margin-left: 3px;
 }
 
-.slick-slider {
-    width: 96% !important;
-    margin: auto !important;
-
-}
-
-.slick-track {
-    margin: 5px !important;
-}
-
-/* Slick Carousel Custom Styles */
+/* Slick Dots */
 .slick-dots {
-    /* bottom: -60px !important; */
     text-align: center;
-}
-
-.slick-dots li {
-    margin: 0 8px;
+    margin-top: 40px;
 }
 
 .slick-dots li button:before {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-
-}
-
-.slick-dots li button:before {
     color: white !important;
-    width: 35px !important;
-    height: 35px !important;
+    opacity: 1;
 }
 
 .slick-dots li.slick-active button:before {
-    color: #7c3aed;
-    opacity: 1;
+    color: #7c3aed !important;
 }
 
-.slick-arrow {
+/* Custom Arrows */
+.custom-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    bottom: 10px;
     width: 50px;
     height: 50px;
-    border: none;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-.slick-arrow:hover {
+.custom-arrow:hover {
     background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
 }
 
-.slick-prev {
-    left: -70px;
+.slick-prev.custom-arrow {
+    left: 20px;
 }
 
-.slick-next {
-    right: -70px;
+.slick-next.custom-arrow {
+    right: 20px;
 }
 
-.slick-arrow::before {
+/* Arrow Icons */
+.custom-arrow::before {
     content: '';
     width: 12px;
     height: 12px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-right: none;
     border-bottom: none;
 }
 
-.slick-prev::before {
+.slick-prev.custom-arrow::before {
     transform: rotate(-45deg);
-    margin-right: -3px;
 }
 
-.slick-next::before {
+.slick-next.custom-arrow::before {
     transform: rotate(135deg);
-    margin-left: -3px;
 }
 
-/* Innovation laptop image styling */
-.innovation-image {
-    background: url('../images/project-name1.png') center/cover;
-    height: 350px;
-    position: relative;
-}
-
-/* Code editor image styling */
-.code-editor-image {
-    background: url('../images/project-name2.png') center/cover;
-    height: 350px;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
     .portfolio-title {
         font-size: 2.5rem;
@@ -617,8 +694,8 @@
         font-size: 1.3rem;
     }
 
-    .slick-arrow {
-        display: none !important;
+    .custom-arrow {
+        display: none;
     }
 }
 
@@ -627,7 +704,6 @@
         font-size: 2rem;
     }
 
-    .project-image,
     .innovation-image,
     .code-editor-image {
         height: 250px;
@@ -762,7 +838,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23f8fafc"/><stop offset="100%" style="stop-color:%23e2e8f0"/></linearGradient></defs><rect width="400" height="300" fill="url(%23bg)"/><circle cx="100" cy="80" r="25" fill="%23334155"/><circle cx="300" cy="80" r="25" fill="%23334155"/><rect x="50" y="150" width="300" height="80" rx="10" fill="%23ffffff" stroke="%23e2e8f0" stroke-width="2"/><rect x="70" y="170" width="60" height="40" rx="5" fill="%23f1f5f9"/><rect x="150" y="170" width="60" height="40" rx="5" fill="%23f1f5f9"/><rect x="230" y="170" width="100" height="20" rx="3" fill="%23cbd5e1"/><rect x="230" y="190" width="80" height="20" rx="3" fill="%23cbd5e1"/><circle cx="350" cy="50" r="8" fill="%23cbd5e1"/><rect x="320" y="42" width="20" height="3" rx="1" fill="%23cbd5e1"/><rect x="320" y="50" width="15" height="3" rx="1" fill="%23cbd5e1"/><rect x="320" y="58" width="25" height="3" rx="1" fill="%23cbd5e1"/></svg>') center/cover;
+    background: url('../images/project-name1.png') center/cover;
     border-radius: inherit;
 }
 

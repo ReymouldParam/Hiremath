@@ -90,96 +90,84 @@
         <h5>Technologies</h5>
         <!-- Tabs -->
         <div class="tech-tabs">
-            <button class="tech-tab active">NextJS</button>
-            <button class="tech-tab">React</button>
-            <button class="tech-tab">Vue</button>
-            <button class="tech-tab">Angular</button>
-            <button class="tech-tab">SvelteKit</button>
+            <button class="tech-tab active" data-skill="next">NextJS</button>
+            <button class="tech-tab" data-skill="react">React</button>
+            <button class="tech-tab" data-skill="vue">Vue</button>
+            <button class="tech-tab" data-skill="angular">Angular</button>
+            <button class="tech-tab" data-skill="svelte">SvelteKit</button>
         </div>
 
         <!-- Content -->
         <div class="tech-content">
-            <!-- Code Card -->
+            <!-- Code Image Card -->
             <div class="code-card">
                 <div class="code-header">
                     <span>snippet.js</span>
                 </div>
-                <div class="code-tabs">
-                    <div class="code-tab active">NextJS</div>
-                    <div class="code-tab">React</div>
-                    <div class="code-tab">Vue</div>
-                    <div class="code-tab">Angular</div>
-                    <div class="code-tab">SvelteKit</div>
-                </div>
                 <div class="code-body">
-                    Add to your <span class="keyword">_document.js</span> &lt;Head&gt; or /app/layout.tsx
-                    &lt;head&gt;:<br><br>
-                    {<span class="keyword">process.env</span>.NODE_ENV === <span class="string">"development"</span> &&
-                    (<br>
-                    &nbsp;&nbsp;&lt;script<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;data-project-id=<span class="string">"..."</span><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;src=<span
-                        class="string">"https://snippet.meticulous.ai/v1/meticulous.js"</span><br>
-                    &nbsp;&nbsp;&gt;&lt;/script&gt;<br>
-                    )}<br>
+                    <img id="tech-image" src="assets/images/nextjs.png" alt="NextJS Code">
                 </div>
             </div>
 
             <!-- Text -->
             <div class="tech-text">
-                <h2>Crafting <span>Lightning Fast Web</span> <br> Experiences With Next.Js</h2>
-                <p>
+                <h2 id="tech-title">
+                    Crafting <span>Lightning Fast Web</span><br> Experiences With Next.Js
+                </h2>
+                <p id="tech-desc">
                     With strong expertise in Next.js, I specialize in building fast, scalable,
                     and SEO-friendly web applications tailored to modern business needs.
                     My focus lies in creating high-performance user experiences through optimized
-                    server-side rendering, static site generation, and API integration. I leverage
-                    the power of Next.js to deliver lightweight, secure, and future-ready solutions.
-                    From custom dashboards and enterprise platforms to interactive websites, I ensure
-                    seamless development workflows and reliable performance. By combining clean code
-                    practices with Next.js features, I help businesses achieve greater speed, flexibility,
-                    and growth in the digital space.
+                    server-side rendering, static site generation, and API integration.
                 </p>
             </div>
         </div>
     </section>
-    <!-- Portpolio section -->
+    <!-- Portfolio Section -->
     <div class="portfolio-container">
         <h1 class="portfolio-title">Next.Js Development<br>Portfolio</h1>
 
-        <div class="portfolio-carousel">
-            <div class="project-card">
-                <div class="innovation-image"></div>
-                <div class="project-content">
-                    <h3 class="project-name">Project Name</h3>
-                    <div class="project-arrow"></div>
+        <div class="portfolio-carousel-wrapper">
+            <div class="portfolio-carousel">
+                <div class="project-card">
+                    <div class="innovation-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-name">Project Name</h3>
+                        <div class="project-arrow"></div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="code-editor-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-name">Project Name</h3>
+                        <div class="project-arrow"></div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="innovation-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-name">Project Name</h3>
+                        <div class="project-arrow"></div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="code-editor-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-name">Project Name</h3>
+                        <div class="project-arrow"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="code-editor-image"></div>
-                <div class="project-content">
-                    <h3 class="project-name">Project Name</h3>
-                    <div class="project-arrow"></div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="innovation-image"></div>
-                <div class="project-content">
-                    <h3 class="project-name">Project Name</h3>
-                    <div class="project-arrow"></div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="code-editor-image"></div>
-                <div class="project-content">
-                    <h3 class="project-name">Project Name</h3>
-                    <div class="project-arrow"></div>
-                </div>
-            </div>
+            <!-- Custom arrows -->
+            <button class="slick-prev custom-arrow"></button>
+            <button class="slick-next custom-arrow"></button>
         </div>
     </div>
+
     <!--  Our Services -->
     <div class="services-container">
         <div class="services-card">
@@ -192,7 +180,7 @@
                         My focus lies in creating high-performance user experiences through
                         optimized server-side
                     </p>
-                    <div class="arrow-icon"></div>
+                    <div class="project-arrow"></div>
                 </div>
                 <div class="image-section">
                     <div class="services-image"></div>
@@ -260,11 +248,13 @@
                 dots: true,
                 infinite: true,
                 speed: 500,
-                slidesToShow: 3,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 4000,
-                arrows: false,
+                arrows: true,
+                prevArrow: $('.slick-prev.custom-arrow'),
+                nextArrow: $('.slick-next.custom-arrow'),
                 responsive: [
                     {
                         breakpoint: 768,
@@ -277,12 +267,67 @@
                 ]
             });
 
-            // Add click handlers for project arrows
+            // Project arrow click
             $('.project-arrow').click(function () {
-                // Add your navigation logic here
                 console.log('Project clicked');
             });
         });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            const content = {
+                next: {
+                    img: "assets/images/nextjs.png",
+                    title: 'Crafting <span>Lightning Fast Web</span><br> Experiences With Next.Js',
+                    desc: "With strong expertise in Next.js, I specialize in building fast, scalable, and SEO-friendly web applications tailored to modern business needs. My focus lies in creating high-performance user experiences through optimized server-side rendering, static site generation, and API integration."
+                },
+                react: {
+                    img: "assets/images/react.png",
+                    title: 'Building <span>Dynamic UI</span><br> With React',
+                    desc: "React allows me to build highly interactive and modular user interfaces. I focus on component-driven architecture, state management, and performance optimization to deliver smooth and scalable front-end solutions."
+                },
+                vue: {
+                    img: "assets/images/vue.png",
+                    title: 'Creating <span>Flexible Apps</span><br> With Vue.js',
+                    desc: "Vue.js offers simplicity and flexibility for building responsive web apps. I use Vue for projects that require fast setup, smooth learning curve, and reactive UI with a balance of speed and performance."
+                },
+                angular: {
+                    img: "assets/images/angular.png",
+                    title: 'Delivering <span>Enterprise Solutions</span><br> With Angular',
+                    desc: "Angular provides a powerful framework for building enterprise-grade applications. I specialize in building structured, scalable, and maintainable apps with Angular’s robust features and TypeScript support."
+                },
+                svelte: {
+                    img: "assets/images/svelte.png",
+                    title: 'Crafting <span>Ultra-Fast Apps</span><br> With SvelteKit',
+                    desc: "SvelteKit allows me to build ultra-fast and optimized apps with minimal overhead. I leverage its compile-time magic for smooth performance, small bundle sizes, and modern web experiences."
+                }
+            };
+
+            $(".tech-tab").on("click", function () {
+                $(".tech-tab").removeClass("active");
+                $(this).addClass("active");
+
+                const skill = $(this).data("skill");
+
+                // Animate out
+                $("#tech-image, #tech-title, #tech-desc").removeClass("show").addClass("fade");
+
+                setTimeout(() => {
+                    // Update content
+                    $("#tech-image").attr("src", content[skill].img);
+                    $("#tech-title").html(content[skill].title);
+                    $("#tech-desc").text(content[skill].desc);
+
+                    // Animate in
+                    $("#tech-image, #tech-title, #tech-desc").addClass("show");
+                }, 300);
+            });
+
+            // Initial show state
+            $("#tech-image, #tech-title, #tech-desc").addClass("fade show");
+        });
+
     </script>
 
 </body>
