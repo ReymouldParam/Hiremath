@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/services.css" />
     <link rel="stylesheet" href="assets/css/about.css" />
-    <link rel="stylesheet" href="assets/css/about.css" />
 
     <!-- Slick Js -->
 
@@ -28,10 +27,10 @@
             </div>
 
             <nav class="navigation">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">About Us</a>
-                <a href="#" class="nav-link active">Services</a>
-                <a href="#" class="nav-link">Portfolio</a>
+                <a href="./index.html" class="nav-link active">Home</a>
+                <a href="./about.html" class="nav-link">About Us</a>
+                <a href="./service.html" class="nav-link">Services</a>
+                <a href="./portfolio.html" class="nav-link">Portfolio</a>
             </nav>
 
             <a href="#" class="contact-btn">
@@ -240,95 +239,96 @@
             <p>Copyright 2025 xyz | All rights Reserved | Designed by ReyMould</p>
         </div>
     </footer>
-
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.portfolio-carousel').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            arrows: false,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.portfolio-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false
+                        }
                     }
+                ]
+            });
+
+            // Add click handlers for project arrows
+            $('.project-arrow').click(function () {
+                // Add your navigation logic here
+                console.log('Project clicked');
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            const content = {
+                next: {
+                    img: "assets/images/nextjs.png",
+                    title: 'Crafting <span>Lightning Fast Web</span><br> Experiences With Next.Js',
+                    desc: "With strong expertise in Next.js, I specialize in building fast, scalable, and SEO-friendly web applications tailored to modern business needs. My focus lies in creating high-performance user experiences through optimized server-side rendering, static site generation, and API integration."
+                },
+                react: {
+                    img: "assets/images/react.png",
+                    title: 'Building <span>Dynamic UI</span><br> With React',
+                    desc: "React allows me to build highly interactive and modular user interfaces. I focus on component-driven architecture, state management, and performance optimization to deliver smooth and scalable front-end solutions."
+                },
+                vue: {
+                    img: "assets/images/vue.png",
+                    title: 'Creating <span>Flexible Apps</span><br> With Vue.js',
+                    desc: "Vue.js offers simplicity and flexibility for building responsive web apps. I use Vue for projects that require fast setup, smooth learning curve, and reactive UI with a balance of speed and performance."
+                },
+                angular: {
+                    img: "assets/images/angular.png",
+                    title: 'Delivering <span>Enterprise Solutions</span><br> With Angular',
+                    desc: "Angular provides a powerful framework for building enterprise-grade applications. I specialize in building structured, scalable, and maintainable apps with Angular’s robust features and TypeScript support."
+                },
+                svelte: {
+                    img: "assets/images/svelte.png",
+                    title: 'Crafting <span>Ultra-Fast Apps</span><br> With SvelteKit',
+                    desc: "SvelteKit allows me to build ultra-fast and optimized apps with minimal overhead. I leverage its compile-time magic for smooth performance, small bundle sizes, and modern web experiences."
                 }
-            ]
+            };
+
+            $(".tech-tab").on("click", function () {
+                $(".tech-tab").removeClass("active");
+                $(this).addClass("active");
+
+                const skill = $(this).data("skill");
+
+                // Animate out
+                $("#tech-image, #tech-title, #tech-desc").removeClass("show").addClass("fade");
+
+                setTimeout(() => {
+                    // Update content
+                    $("#tech-image").attr("src", content[skill].img);
+                    $("#tech-title").html(content[skill].title);
+                    $("#tech-desc").text(content[skill].desc);
+
+                    // Animate in
+                    $("#tech-image, #tech-title, #tech-desc").addClass("show");
+                }, 300);
+            });
+
+            // Initial show state
+            $("#tech-image, #tech-title, #tech-desc").addClass("fade show");
         });
 
-        // Add click handlers for project arrows
-        $('.project-arrow').click(function () {
-            // Add your navigation logic here
-            console.log('Project clicked');
-        });
-    });
-</script>
+    </script>
 
-<script>
-    $(document).ready(function () {
-        const content = {
-            next: {
-                img: "assets/images/nextjs.png",
-                title: 'Crafting <span>Lightning Fast Web</span><br> Experiences With Next.Js',
-                desc: "With strong expertise in Next.js, I specialize in building fast, scalable, and SEO-friendly web applications tailored to modern business needs. My focus lies in creating high-performance user experiences through optimized server-side rendering, static site generation, and API integration."
-            },
-            react: {
-                img: "assets/images/react.png",
-                title: 'Building <span>Dynamic UI</span><br> With React',
-                desc: "React allows me to build highly interactive and modular user interfaces. I focus on component-driven architecture, state management, and performance optimization to deliver smooth and scalable front-end solutions."
-            },
-            vue: {
-                img: "assets/images/vue.png",
-                title: 'Creating <span>Flexible Apps</span><br> With Vue.js',
-                desc: "Vue.js offers simplicity and flexibility for building responsive web apps. I use Vue for projects that require fast setup, smooth learning curve, and reactive UI with a balance of speed and performance."
-            },
-            angular: {
-                img: "assets/images/angular.png",
-                title: 'Delivering <span>Enterprise Solutions</span><br> With Angular',
-                desc: "Angular provides a powerful framework for building enterprise-grade applications. I specialize in building structured, scalable, and maintainable apps with Angular’s robust features and TypeScript support."
-            },
-            svelte: {
-                img: "assets/images/svelte.png",
-                title: 'Crafting <span>Ultra-Fast Apps</span><br> With SvelteKit',
-                desc: "SvelteKit allows me to build ultra-fast and optimized apps with minimal overhead. I leverage its compile-time magic for smooth performance, small bundle sizes, and modern web experiences."
-            }
-        };
-
-        $(".tech-tab").on("click", function () {
-            $(".tech-tab").removeClass("active");
-            $(this).addClass("active");
-
-            const skill = $(this).data("skill");
-
-            // Animate out
-            $("#tech-image, #tech-title, #tech-desc").removeClass("show").addClass("fade");
-
-            setTimeout(() => {
-                // Update content
-                $("#tech-image").attr("src", content[skill].img);
-                $("#tech-title").html(content[skill].title);
-                $("#tech-desc").text(content[skill].desc);
-
-                // Animate in
-                $("#tech-image, #tech-title, #tech-desc").addClass("show");
-            }, 300);
-        });
-
-        // Initial show state
-        $("#tech-image, #tech-title, #tech-desc").addClass("fade show");
-    });
-
-</script>
+    <script src="assets/header.js"></script>
+</body>
 
 </html>

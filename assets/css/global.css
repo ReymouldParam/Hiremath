@@ -13,19 +13,32 @@ body {
 
 /* ===== Global Header ===== */
 .header {
-    /* width: 100%; */
+    width: 100%;
     padding: 20px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    /* fixed instead of sticky */
     top: 0;
+    left: 0;
     z-index: 999;
+    background: transparent;
+    /* starts transparent */
+    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* When scrolled */
+.header.scrolled {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 15px 0px;
+    /* slightly smaller padding when scrolled */
 }
 
 /* Logo */
 .logo img {
-    height: 50px;
+    height: 25px;
     width: auto;
 }
 
@@ -83,7 +96,6 @@ body {
 .contact-btn svg {
     stroke: #fff;
 }
-
 
 /******************* Footer   */
 /* General Footer Styling */

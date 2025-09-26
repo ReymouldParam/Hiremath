@@ -46,7 +46,7 @@
 /* Hero */
 .hero-section {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     z-index: 4;
 }
 
@@ -262,6 +262,7 @@
     font-weight: 600;
     color: rgba(255, 255, 255, 0.7);
     position: absolute;
+
 }
 
 .scroll-btn {
@@ -428,7 +429,7 @@
     background-repeat: no-repeat;
     display: flex;
     /* align-items: center; */
-    padding: 5% 10%;
+    padding: 3% 3%;
     justify-content: space-between;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -442,25 +443,28 @@
 
 .our-story-image-container img {
     width: 350px;
-    height: 220px;
+    /* height: 220px; */
 }
 
 .explore-our-story {
     color: white;
     font-size: 18px;
     font-weight: 700;
+    padding: 20px;
 }
 
 .heading-our-story {
     color: white;
     font-size: 34px;
     font-weight: 400;
+    padding: 2%;
 }
 
 .story-our-para {
     color: white;
     font-size: 14px;
     font-weight: 400;
+    padding: 20px;
 }
 
 
