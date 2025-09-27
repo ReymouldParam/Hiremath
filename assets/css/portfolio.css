@@ -2,7 +2,7 @@
         background: #fff;
         border-radius: 24px;
         width: 95%;
-        margin: 40px auto;
+        margin: 15px auto;
         /* max-width: 1300px; */
         padding: 20px 40px;
         box-sizing: border-box;
@@ -175,6 +175,7 @@
         flex-wrap: wrap;
         margin: auto;
         margin-bottom: 2%;
+        margin-top: 2%;
     }
 
     .project-content {
@@ -273,12 +274,16 @@
         margin-bottom: 5%;
     }
 
-    /***************** Testimonial Section  */
     /* ************************* Section 6 */
     .testimonial-section {
         padding: 60px 20px;
         text-align: center;
-        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        background-image: url('../images/clients-bg.png');
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
     }
 
     .testimonial-section h2 {

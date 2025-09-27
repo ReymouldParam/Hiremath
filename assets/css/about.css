@@ -4,7 +4,7 @@
     background: #fff;
     border-radius: 20px;
     padding: 0;
-    /* height: 93vh; */
+    height: 95vh;
     margin: 40px auto;
 }
 
@@ -69,6 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 8%;
 
 }
 
@@ -269,9 +270,11 @@
 /* Our Story Section */
 
 .our-story {
-    /* width: 100%;
-    max-width: 1300px; */
-    background: linear-gradient(135deg, #111111, #2d0b59);
+    background-image: url('../images/our-portfolio-bg.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     padding: 60px 50px;
@@ -342,7 +345,11 @@
     width: 100%;
     /* max-width: 1300px; */
     padding: 60px 50px;
-    background: linear-gradient(135deg, #111111, #2d0b59);
+    background-image: url('../images/our-portfolio-bg.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     /* border-radius: 40px; */
     color: #fff;
 }
@@ -520,7 +527,11 @@
 .portfolio-container {
     width: 100%;
     position: relative;
-    background: linear-gradient(135deg, #111111, #2d0b59);
+    background-image: url('../images/our-portfolio-bg.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 60px 0;
 }
 
@@ -716,8 +727,11 @@
 .services-container {
     position: relative;
     z-index: 1;
-    /* background: linear-gradient(135deg, #111111, #2d0b59); */
-    background-color: #0a0a23;
+   background-image: url('../images/our-portfolio-bg.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 4%;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;

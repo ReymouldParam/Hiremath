@@ -115,16 +115,31 @@
 
     /* Hero */
     .hero-section {
-        padding: 80px 16px 20px;
+        padding: 60px 16px 20px;
+        text-align: center;
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+        padding: 0 10px;
     }
 
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         height: auto;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .title-highlight {
+        padding: 0.3rem 0.8rem;
+        border-radius: 8px;
+        font-size: 18px;
+        display: inline-block;
+        margin: 0.2rem 0;
     }
 
     .title-results {
@@ -137,56 +152,96 @@
     .bottom-section {
         flex-direction: column;
         gap: 20px;
-        align-items: stretch;
+        align-items: center;
         padding: 16px;
+        text-align: center;
     }
 
     .results-wrapper {
         order: -1;
         margin-bottom: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 25%;
     }
 
     .results-bg {
         width: 100%;
-        max-width: 320px;
-        height: 56px;
+        max-width: 280px;
+        height: 50px;
         margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .rotating-text {
-        font-size: 24px;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 0.2rem 0.8rem;
     }
 
     .scroll-btn {
-        left: 50%;
-        top: auto;
+        left: 38%;
+        top: 52%;
         bottom: -20px;
         transform: translate(-50%, 0);
-        width: 54px;
-        height: 54px;
+        width: 50px;
+        height: 50px;
+        border-width: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .scroll-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     /* Services list (top list in first section) */
+    .services-list {
+        width: 100%;
+        order: 2;
+    }
+
     .services-list ul {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 10px;
+        /* gap: 8px; */
+        padding: 0;
+        margin: 0;
     }
 
     .service-item-web {
-        font-size: 16px;
-        padding: 10px 12px;
+        font-size: 14px;
+        padding: 8px 12px;
+        text-align: center;
+        border-radius: 12px;
     }
 
     /* Image collage */
     .image-collage-grid {
         grid-template-columns: 1fr 1fr;
         max-width: 100%;
-        height: auto;
+        height: 200px;
+        gap: 8px;
+        order: 3;
+    }
+
+    .image-container-tall {
+        border-radius: 16px 0 0 16px;
+    }
+
+    .image-container-small.top-right {
+        border-radius: 20px;
     }
 
     .image-container-small.bottom-right {
         height: auto;
+        border-radius: 0 0 20px 20px;
     }
 
     /* Section2 (Our Story) */
@@ -265,7 +320,7 @@
     }
 
     .code-window {
-        height: 220px;
+        height: 180px;
     }
 
     /* Portfolio section */
@@ -422,7 +477,7 @@
 /* Full HD: 1024px–1919px */
 @media (min-width: 1024px) and (max-width: 1919px) {
     .header {
-        padding: 18px 40px;
+        padding: 30px 40px;
     }
 
     .hero-section {
@@ -491,7 +546,7 @@
     }
 
     .portfolio-section {
-        /* padding: 80px 10%; */
+        padding: 80px 10%;
     }
 }
 
@@ -653,7 +708,7 @@
     }
 
     .hero-title {
-        font-size: 30px;
+        font-size: 18px;
     }
 
     .hero-title .highlight {
@@ -859,7 +914,9 @@
 /* Full HD: 1024px–1919px - Contact Page */
 @media (min-width: 1024px) and (max-width: 1919px) {
     .section1 {
-        width: 92%;
+        width: 94%;
+        margin: 15px auto;
+        padding: 35px;
     }
 
     .contact-section {
@@ -1075,15 +1132,16 @@
     /* About Page Container */
     .container {
         width: 96%;
-        margin: 20px auto;
+        margin: 10px auto;
         border-radius: 16px;
+        height: 60vh;
     }
 
     /* About Section */
     .about-section {
         flex-direction: column;
         gap: 24px;
-        padding: 20px 16px;
+        padding: 60px 16px;
     }
 
     .about-left {
@@ -1287,7 +1345,7 @@
 
     /* Services Container */
     .services-container {
-        padding: 40px 16px;
+        padding: 0px 0px;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
     }

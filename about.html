@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./assets/css/about.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 
 <body>
@@ -34,11 +36,11 @@
             <button class="contact-btn">
                 Contact
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </button>
         </header>
-
         <!-- About Section -->
         <section class="about-section">
             <div class="about-left">
@@ -246,7 +248,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.portfolio-carousel').slick({
                 dots: true,
                 infinite: true,
@@ -269,13 +271,13 @@
             });
 
             // Project arrow click
-            $('.project-arrow').click(function() {
+            $('.project-arrow').click(function () {
                 console.log('Project clicked');
             });
         });
     </script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             const content = {
                 next: {
                     img: "assets/images/nextjs.png",
@@ -304,7 +306,7 @@
                 }
             };
 
-            $(".tech-tab").on("click", function() {
+            $(".tech-tab").on("click", function () {
                 $(".tech-tab").removeClass("active");
                 $(this).addClass("active");
 

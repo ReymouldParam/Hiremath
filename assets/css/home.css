@@ -424,16 +424,17 @@
 
 /* ******************** Our Story Section ******************** */
 .section2 {
-    background: linear-gradient(to right, #1D1D1D 65%, #323EC3 100%);
-    background-position: center;
+    background-image: url('../images/aboutus-bg.png');
+    /* background-position: center; */
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     /* align-items: center; */
     padding: 3% 3%;
     justify-content: space-between;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    margin-top: -4%;
+    margin-top: -2%;
 }
 
 .our-story-image-container {
@@ -472,12 +473,15 @@
 
 /* ===== Section 3 ===== */
 .services-section {
+    background-image: url('../images/aboutus-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     height: fit-content;
     align-items: flex-start;
     padding: 4%;
-    background: linear-gradient(to bottom, #1a0b2e, #0c0c0c);
 }
 
 /* ===== Left Side (Services List) ===== */
@@ -585,11 +589,15 @@
 
 /* ===== Section Layout ===== */
 .technologies-section {
+    background-image: url('../images/aboutus-bg.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 4% 4%;
-    background: linear-gradient(to bottom, #1a0b2e, #0c0c0c);
+    /* background: linear-gradient(to bottom, #1a0b2e, #0c0c0c); */
 }
 
 /* ===== Left Content ===== */
@@ -636,6 +644,7 @@
     justify-content: center;
     font-size: 24px;
     cursor: pointer;
+    margin-left: 15px;
 }
 
 /* ===== Right Code Section ===== */
@@ -736,9 +745,15 @@
 /* Section Container */
 .portfolio-section {
     background: linear-gradient(135deg, #f6f2ff, #e9e5ff);
-    padding: 60px 8%;
+    padding: 40px 8%;
     border-radius: 20px;
     color: #000;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    margin-top: -40px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+
 }
 
 /* Heading */
@@ -906,9 +921,13 @@
 
 /* ************************* Section 6 */
 .testimonial-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background-image: url('../images/clients-bg.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .testimonial-section h2 {
