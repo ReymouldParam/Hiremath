@@ -8,6 +8,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     padding-bottom: 40px;
     position: relative;
+    z-index: 1;
 }
 
 .section::before,
@@ -68,11 +69,43 @@
 }
 
 .title-highlight {
-    background: #2d2d2d;
+    background: #0c1120;
+    /* solid dark like your screenshot */
     color: #fff;
-    padding: 0.4rem 1rem;
-    border-radius: 12px;
+    padding: 0.4rem 1.2rem;
+    border-radius: 8px 14px 14px 8px;
+    /* asymmetric rounded rectangle */
+    display: inline-block;
+    font-weight: 600;
+    transform-origin: center;
+    animation: waveSide 6s infinite ease-in-out;
 }
+
+/* Keyframes: left edge tilts, then right edge tilts */
+@keyframes waveSide {
+    0% {
+        transform: rotate(0deg) skewX(0deg);
+    }
+
+    25% {
+        transform: rotate(-2deg) skewX(-6deg);
+    }
+
+    /* left side up */
+    50% {
+        transform: rotate(0deg) skewX(0deg);
+    }
+
+    75% {
+        transform: rotate(2deg) skewX(4deg);
+    }
+
+    /* right side up */
+    100% {
+        transform: rotate(0deg) skewX(0deg);
+    }
+}
+
 
 .title-results {
     display: block;
@@ -136,7 +169,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 18px;
+    font-size: 16px;
     border: 1px solid transparent;
     border-radius: 20px;
     padding: 10px;
@@ -144,8 +177,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 0.5;
-    color: #000;
-    font-weight: 600;
+    color: #000
 }
 
 .service-item-web.active {
@@ -435,6 +467,22 @@
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     margin-top: -2%;
+    z-index: 2;
+    position: relative;
+}
+
+.title-highlight-blue {
+    background: #323EC3;
+    /* solid dark like your screenshot */
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 8px 14px 14px 8px;
+    /* asymmetric rounded rectangle */
+    display: inline-block;
+    font-weight: 400;
+    transform-origin: center;
+    animation: waveSide 6s infinite ease-in-out;
+
 }
 
 .our-story-image-container {
@@ -450,7 +498,7 @@
 .explore-our-story {
     color: white;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
     padding: 20px;
 }
 
@@ -513,8 +561,8 @@
 }
 
 .service-icon img {
-    height: 60px;
-    width: 60px;
+    height: 120px;
+    width: 120px;
 }
 
 /* ===== Right Side (Content) ===== */
@@ -523,7 +571,25 @@
     margin-left: 50px;
 }
 
-.services-content h4 {
+.service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.service-content p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.services-content {
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -547,6 +613,7 @@
 .services-content p {
     font-size: 16px;
     color: #bbb;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
@@ -579,6 +646,7 @@
     opacity: 0;
     transform: scale(0.95);
     transition: all 0.7s ease;
+    height: 400px;
 }
 
 .services-image img.active {
@@ -604,18 +672,19 @@
 .tech-content {
     flex: 1;
     margin-right: 50px;
+    padding: 2%;
 }
 
 .tech-content h4 {
     color: white;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .tech-content h2 {
     font-size: 36px;
     line-height: 1.3;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 20px;
     color: white;
 }
@@ -642,10 +711,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
     margin-left: 15px;
+    color: white;
 }
+
+.arrow-btn i {
+    transform: rotate(-45deg);
+    /* rotate only the arrow */
+    display: inline-block;
+}
+
 
 /* ===== Right Code Section ===== */
 .code-editor {
@@ -827,6 +904,7 @@
 
 /* Arrow style */
 .arrow-portfolio-btn .arrow {
+    transform: rotate(-45deg);
     display: inline-block;
     transition: transform 0.4s ease;
     font-size: 16px;

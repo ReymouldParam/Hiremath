@@ -497,7 +497,8 @@
     }
 
     .services-content h2 {
-        font-size: 28px;
+        font-size: 34px;
+        font-weight: 400;
     }
 
     .tech-content h2 {
@@ -1001,6 +1002,7 @@
 
     .hero-title {
         font-size: 44px;
+        overflow: visible;
     }
 
     .featured-image img {
