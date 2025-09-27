@@ -19,7 +19,7 @@
         <!-- Header -->
         <header class="header">
             <div class="logo">
-                <img src="./assets/images/HIREMATH LOGO VERSION 2 1.svg" alt="Logo">
+                <img src="./assets/images/HIREMATH LOGO VERSION 2 1.svg" alt="Logo" />
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
@@ -32,11 +32,13 @@
                 <a href="./service.html" class="nav-link">Services</a>
                 <a href="./portfolio.html" class="nav-link">Portfolio</a>
             </nav>
-            <a href="#" class="contact-btn">Contact
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m9 18 6-6-6-6" />
+            <button class="contact-btn">
+                Contact
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
-            </a>
+            </button>
         </header>
         <div>
             <!-- Dots -->
@@ -103,15 +105,18 @@
                 </div>
             </div>
             <div class="thumb-row">
-                <div class="thumb" data-title="Landing Page Website" data-desc="A sleek and modern landing page design for startups and businesses.">
+                <div class="thumb" data-title="Landing Page Website"
+                    data-desc="A sleek and modern landing page design for startups and businesses.">
                     <p class="thumb-title">Landing Page</p>
                     <img src="https://picsum.photos/300/200?random=2" alt="Landing Page">
                 </div>
-                <div class="thumb" data-title="E-commerce Platform" data-desc="A fully functional online store with cart, checkout, and payment integration.">
+                <div class="thumb" data-title="E-commerce Platform"
+                    data-desc="A fully functional online store with cart, checkout, and payment integration.">
                     <p class="thumb-title">E-commerce</p>
                     <img src="https://picsum.photos/300/200?random=3" alt="E-commerce">
                 </div>
-                <div class="thumb" data-title="Admin Dashboard" data-desc="A responsive admin dashboard with charts, tables, and data analytics.">
+                <div class="thumb" data-title="Admin Dashboard"
+                    data-desc="A responsive admin dashboard with charts, tables, and data analytics.">
                     <p class="thumb-title">Dashboard</p>
                     <img src="https://picsum.photos/300/200?random=4" alt="Dashboard">
                 </div>
@@ -135,15 +140,18 @@
                 </div>
             </div>
             <div class="thumb-row">
-                <div class="thumb" data-title="Chat Application" data-desc="A real-time chat app with secure messaging and file sharing.">
+                <div class="thumb" data-title="Chat Application"
+                    data-desc="A real-time chat app with secure messaging and file sharing.">
                     <p class="thumb-title">Chat App</p>
                     <img src="https://picsum.photos/300/200?random=6" alt="Chat App">
                 </div>
-                <div class="thumb" data-title="Travel Planner App" data-desc="A travel app that helps users plan trips, book hotels, and manage itineraries.">
+                <div class="thumb" data-title="Travel Planner App"
+                    data-desc="A travel app that helps users plan trips, book hotels, and manage itineraries.">
                     <p class="thumb-title">Travel App</p>
                     <img src="https://picsum.photos/300/200?random=7" alt="Travel App">
                 </div>
-                <div class="thumb" data-title="Fitness Tracker App" data-desc="An app to track workouts, monitor progress, and set fitness goals.">
+                <div class="thumb" data-title="Fitness Tracker App"
+                    data-desc="An app to track workouts, monitor progress, and set fitness goals.">
                     <p class="thumb-title">Fitness App</p>
                     <img src="https://picsum.photos/300/200?random=8" alt="Fitness App">
                 </div>
@@ -168,15 +176,18 @@
                 </div>
             </div>
             <div class="thumb-row">
-                <div class="thumb" data-title="ERP System" data-desc="An enterprise resource planning solution to manage operations efficiently.">
+                <div class="thumb" data-title="ERP System"
+                    data-desc="An enterprise resource planning solution to manage operations efficiently.">
                     <p class="thumb-title">ERP System</p>
                     <img src="https://picsum.photos/300/200?random=10" alt="ERP System">
                 </div>
-                <div class="thumb" data-title="CRM Tool" data-desc="A customer relationship management tool to handle leads and clients effectively.">
+                <div class="thumb" data-title="CRM Tool"
+                    data-desc="A customer relationship management tool to handle leads and clients effectively.">
                     <p class="thumb-title">CRM Tool</p>
                     <img src="https://picsum.photos/300/200?random=11" alt="CRM Tool">
                 </div>
-                <div class="thumb" data-title="Inventory Manager" data-desc="A complete solution for inventory tracking, reporting, and stock management.">
+                <div class="thumb" data-title="Inventory Manager"
+                    data-desc="A complete solution for inventory tracking, reporting, and stock management.">
                     <p class="thumb-title">Inventory Manager</p>
                     <img src="https://picsum.photos/300/200?random=12" alt="Inventory Manager">
                 </div>
@@ -299,7 +310,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.testimonial-slider').slick({
                 dots: true,
                 arrows: true,
@@ -320,8 +331,8 @@
     </script>
     <!-- Portfolio JS -->
     <script>
-        $(document).ready(function() {
-            $(".project-block .thumb img, .project-block .thumb .thumb-title").on("click", function() {
+        $(document).ready(function () {
+            $(".project-block .thumb img, .project-block .thumb .thumb-title").on("click", function () {
                 let thumb = $(this).closest(".thumb");
                 let clickedImgSrc = thumb.find("img").attr("src"); // get clicked thumbnail src
                 let clickedAlt = thumb.find("img").attr("alt"); // get alt text
@@ -333,17 +344,17 @@
 
                 // fade out and update featured image
                 let featuredImg = projectBlock.find(".project-media .featured-image img");
-                featuredImg.fadeOut(200, function() {
+                featuredImg.fadeOut(200, function () {
                     $(this).attr("src", clickedImgSrc)
                         .attr("alt", clickedAlt)
                         .fadeIn(200);
                 });
 
                 // update project title and description
-                projectBlock.find(".project-title").fadeOut(200, function() {
+                projectBlock.find(".project-title").fadeOut(200, function () {
                     $(this).text(newTitle).fadeIn(200);
                 });
-                projectBlock.find(".project-desc").fadeOut(200, function() {
+                projectBlock.find(".project-desc").fadeOut(200, function () {
                     $(this).text(newDesc).fadeIn(200);
                 });
             });
