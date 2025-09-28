@@ -2,7 +2,8 @@
     width: 96%;
     /* max-width: 1300px; */
     background: #fff;
-    border-radius: 20px;
+    border-radius: 15px;
+    border-top-left-radius: 95px;
     padding: 0;
     height: 95vh;
     margin: 40px auto;
@@ -15,6 +16,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
+    position: relative;
 }
 
 .about-left {
@@ -37,7 +39,36 @@
     border-radius: 10px;
     display: inline-block;
     transform: rotate(-2deg);
+    transform-origin: center;
+    animation: waveSide 6s infinite ease-in-out;
 }
+
+/* Keyframes: left edge tilts, then right edge tilts */
+@keyframes waveSide {
+    0% {
+        transform: rotate(0deg) skewX(0deg);
+    }
+
+    25% {
+        transform: rotate(-2deg) skewX(-6deg);
+    }
+
+    /* left side up */
+    50% {
+        transform: rotate(0deg) skewX(0deg);
+    }
+
+    75% {
+        transform: rotate(2deg) skewX(4deg);
+    }
+
+    /* right side up */
+    100% {
+        transform: rotate(0deg) skewX(0deg);
+    }
+}
+
+
 
 .about-left p {
     font-size: 16px;
@@ -51,10 +82,15 @@
     padding: 12px 25px;
     background: #4f46e5;
     color: #fff;
-    border-radius: 8px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
     font-weight: 500;
     text-decoration: none;
     transition: 0.3s;
+}
+
+.btn i {
+    transform: rotate(-45deg);
 }
 
 .btn:hover {
@@ -110,30 +146,27 @@
     left: -5%;
 }
 
-/* Dotted background */
-.dotted-bg {
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 200px;
-    height: 200px;
-    background-image: radial-gradient(#6b21a8 1px, transparent 1px);
-    background-size: 12px 12px;
-    opacity: 0.3;
-    z-index: -1;
+/* Dot Pattern Background */
+.dot-pattern {
+    /* position: absolute; */
+    width: 400px;
+    height: 150px;
+    opacity: 0.1;
+    background-image: radial-gradient(circle, #6b21a8 2px, transparent 2px);
+    background-size: 20px 20px;
 }
 
-.dotted-bg-left {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    width: 200px;
-    height: 200px;
-    background-image: radial-gradient(#6b21a8 1px, transparent 1px);
-    background-size: 12px 12px;
-    opacity: 0.3;
-    z-index: -1;
+.dot-pattern.top-left {
+    top: 140px;
+    left: 50px;
 }
+
+.dot-pattern.bottom-right {
+    bottom: 100px;
+    right: 50px;
+}
+
+
 
 /* ================= Animations ================= */
 
@@ -312,6 +345,8 @@
     color: #fff;
     padding: 4px 12px;
     border-radius: 12px;
+    transform-origin: center;
+    animation: waveSide 6s infinite ease-in-out;
 }
 
 .story-left p {
@@ -493,6 +528,8 @@
     border-radius: 12px;
     color: #fff;
     display: inline-block;
+    transform-origin: center;
+    animation: waveSide 6s infinite ease-in-out;
 }
 
 .tech-text p {
@@ -563,6 +600,7 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    border: 1px solid #7d2fff;
 }
 
 .project-card:hover {
@@ -595,23 +633,26 @@
     margin: 0;
 }
 
-.project-arrow {
+.arrow-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    background: linear-gradient(to right, #7d2fff, #2eb9ff);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 22px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+    margin-left: 15px;
+    color: white;
 }
 
-.project-arrow:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+.arrow-btn i {
+    transform: rotate(-45deg);
+    /* rotate only the arrow */
+    display: inline-block;
 }
+
 
 .project-arrow::after {
     content: '';
@@ -628,6 +669,7 @@
 .slick-dots {
     text-align: center;
     margin-top: 40px;
+    bottom: -50px !important;
 }
 
 .slick-dots li button:before {
@@ -727,7 +769,7 @@
 .services-container {
     position: relative;
     z-index: 1;
-   background-image: url('../images/our-portfolio-bg.png');
+    background-image: url('../images/our-portfolio-bg.png');
     /* background-position: center; */
     background-repeat: no-repeat;
     background-position: center;

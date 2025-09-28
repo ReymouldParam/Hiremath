@@ -2,7 +2,8 @@
 .section {
     width: 96%;
     background: #fff;
-    border-radius: 30px;
+    border-radius: 15px;
+    border-top-left-radius: 95px;
     overflow: hidden;
     margin: 10px auto;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -172,7 +173,7 @@
     font-size: 16px;
     border: 1px solid transparent;
     border-radius: 20px;
-    padding: 10px;
+    padding: 5px;
     background: rgba(255, 255, 255, 0.05);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -980,23 +981,6 @@
     margin-bottom: 20px;
 }
 
-.contact-btn {
-    padding: 8px 20px;
-    border-radius: 20px;
-    border: 1px solid #7d2fff;
-    color: #7d2fff;
-    background: transparent;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact-btn:hover {
-    background: linear-gradient(to right, #7d2fff, #2eb9ff);
-    color: #fff;
-    border: none;
-}
-
 /* ************************* Section 6 */
 .testimonial-section {
     padding: 40px 20px;
@@ -1073,7 +1057,7 @@
 /* Slick Dots Customization */
 .slick-dots li button:before {
     font-size: 12px !important;
-    color: #6a11cb !important;
+    color: #fff !important;
     opacity: 0.8;
 }
 
