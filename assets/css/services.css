@@ -1,7 +1,8 @@
   /* Hero Container */
   .hero-container {
       background: #f8fafc;
-      border-radius: 40px;
+      border-radius: 15px;
+      border-top-left-radius: 80px;
       margin: 20px;
       height: 100vh;
       position: relative;
@@ -48,19 +49,19 @@
   }
 
   .cta-button {
-      background: linear-gradient(135deg, #6b21a8 0%, #7c3aed 100%);
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 10px 30px rgba(107, 33, 168, 0.3);
+      display: inline-block;
+      padding: 12px 25px;
+      background: #4f46e5;
+      color: #fff;
+      border-top-right-radius: 12px;
+      border-top-left-radius: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.3s;
+  }
+
+  .cta-button i {
+      transform: rotate(-45deg);
   }
 
   .cta-button:hover {
@@ -68,10 +69,6 @@
       box-shadow: 0 15px 40px rgba(107, 33, 168, 0.4);
   }
 
-  .cta-button::after {
-      content: '→';
-      font-size: 18px;
-  }
 
   /* Floating Icons */
   .floating-icon {

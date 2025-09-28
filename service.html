@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="assets/css/services.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/about.css" />
-
     <!-- Slick Js -->
-
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -94,40 +94,38 @@
                 Launch a stunning, responsive website that<br>
                 captures your brand essence and drives results.
             </p>
-
-            <button class="cta-button">Book A Call</button>
+            <a href="#" class="cta-button">Book A Call <i class="fa-solid fa-arrow-right"></i></a>
         </main>
     </div>
-    <div class="tech-tabs">
-        <button class="tech-tab active">Web Development</button>
-        <button class="tech-tab">Mobile Development</button>
-        <button class="tech-tab">Software Development</button>
-        <button class="tech-tab">Testing</button>
-    </div>
-
-    <div class="tech-content">
-
-        <div class="code-card">
-
-            <div>
-                <img src="assets/images/our-services-cover.png" alt="our-service-cover" />
+    <section class="portfolio-container">
+        <div class="tech-tabs">
+            <button class="tech-tab active">Web Development</button>
+            <button class="tech-tab">Mobile Development</button>
+            <button class="tech-tab">Software Development</button>
+            <button class="tech-tab">Testing</button>
+        </div>
+        <div class="tech-content">
+            <div class="code-card">
+                <div>
+                    <img src="assets/images/our-services-cover.png" alt="our-service-cover" />
+                </div>
+            </div>
+            <div class="tech-text">
+                <h2 style="color: white;">Crafting <span>Lightning Fast Web</span> <br> Experiences With Next.Js</h2>
+                <p>
+                    With strong expertise in Next.js, I specialize in building fast, scalable,
+                    and SEO-friendly web applications tailored to modern business needs.
+                    My focus lies in creating high-performance user experiences through optimized
+                    server-side rendering, static site generation, and API integration. I leverage
+                    the power of Next.js to deliver lightweight, secure, and future-ready solutions.
+                    From custom dashboards and enterprise platforms to interactive websites, I ensure
+                    seamless development workflows and reliable performance. By combining clean code
+                    practices with Next.js features, I help businesses achieve greater speed, flexibility,
+                    and growth in the digital space.
+                </p>
             </div>
         </div>
-        <div class="tech-text">
-            <h2>Crafting <span>Lightning Fast Web</span> <br> Experiences With Next.Js</h2>
-            <p>
-                With strong expertise in Next.js, I specialize in building fast, scalable,
-                and SEO-friendly web applications tailored to modern business needs.
-                My focus lies in creating high-performance user experiences through optimized
-                server-side rendering, static site generation, and API integration. I leverage
-                the power of Next.js to deliver lightweight, secure, and future-ready solutions.
-                From custom dashboards and enterprise platforms to interactive websites, I ensure
-                seamless development workflows and reliable performance. By combining clean code
-                practices with Next.js features, I help businesses achieve greater speed, flexibility,
-                and growth in the digital space.
-            </p>
-        </div>
-    </div>
+    </section>
     <!-- Our Technologies  -->
     <section class="technologies">
         <h5>Technologies</h5>
@@ -178,7 +176,9 @@
                         My focus lies in creating high-performance user experiences through
                         optimized server-side
                     </p>
-                    <div class="arrow-icon"></div>
+                    <div class="arrow-btn">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
                 </div>
                 <div class="image-section">
                     <div class="services-image"></div>
