@@ -196,14 +196,20 @@ textarea {
 .submit-btn {
     background: linear-gradient(90deg, #9333ea, #f97316);
     color: #fff;
-    font-weight: 600;
-    padding: 14px 25px;
+    /* font-weight: 600; */
+    padding: 5px 10px;
     border: none;
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     display: inline-block;
     width: fit-content;
+}
+
+.submit-btn i {
+    transform: rotate(-45deg);
 }
 
 .submit-btn:hover {

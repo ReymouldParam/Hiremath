@@ -185,7 +185,9 @@
     .portfolio-section {
         margin: auto;
         padding: 60px 0px;
-        background: linear-gradient(135deg, #16213e 40%, #6b21a8 100%);
+        background-image: url('../images/aboutus-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .section-heading {
