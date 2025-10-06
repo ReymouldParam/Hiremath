@@ -33,17 +33,29 @@
 }
 
 .about-left h1 span {
-    background: #0a0a23;
+    position: relative;
     color: #fff;
     padding: 5px 15px;
     border-radius: 10px;
     display: inline-block;
-    transform: rotate(-2deg);
+    overflow: hidden;
+    /* keeps animated bg inside */
+    font-weight: 600;
+}
+
+/* Animate only the background, not the text */
+.about-left h1 span::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0a0a23;
+    border-radius: inherit;
+    z-index: -1;
     transform-origin: center;
     animation: waveSide 6s infinite ease-in-out;
 }
 
-/* Keyframes: left edge tilts, then right edge tilts */
+/* shared keyframes */
 @keyframes waveSide {
     0% {
         transform: rotate(0deg) skewX(0deg);
@@ -53,7 +65,6 @@
         transform: rotate(-2deg) skewX(-6deg);
     }
 
-    /* left side up */
     50% {
         transform: rotate(0deg) skewX(0deg);
     }
@@ -62,11 +73,11 @@
         transform: rotate(2deg) skewX(4deg);
     }
 
-    /* right side up */
     100% {
         transform: rotate(0deg) skewX(0deg);
     }
 }
+
 
 
 
@@ -341,10 +352,23 @@
 
 .story-left h2 span {
     display: inline-block;
-    background: linear-gradient(90deg, #7d2fff, #2eb9ff);
+    /* background: linear-gradient(90deg, #7d2fff, #2eb9ff); */
     color: #fff;
     padding: 4px 12px;
     border-radius: 12px;
+    transform-origin: center;
+    animation: waveSide 6s infinite ease-in-out;
+}
+
+/* Animated gradient background only */
+.story-left h2 span::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #7d2fff, #2eb9ff);
+    border-radius: inherit;
+    z-index: -1;
+    /* behind text */
     transform-origin: center;
     animation: waveSide 6s infinite ease-in-out;
 }
@@ -523,7 +547,7 @@
 }
 
 .tech-text h2 span {
-    background: linear-gradient(90deg, #7d2fff, #2eb9ff);
+    /* background: linear-gradient(90deg, #7d2fff, #2eb9ff); */
     padding: 4px 12px;
     border-radius: 12px;
     color: #fff;
@@ -531,6 +555,19 @@
     transform-origin: center;
     animation: waveSide 6s infinite ease-in-out;
 }
+
+/* Animate only the background gradient */
+.tech-text h2 span::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #7d2fff, #2eb9ff);
+    border-radius: inherit;
+    z-index: -1;
+    transform-origin: center;
+    animation: waveSide 6s infinite ease-in-out;
+}
+
 
 .tech-text p {
     font-size: 16px;
