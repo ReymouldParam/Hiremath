@@ -112,21 +112,22 @@
                 <h2>GET IN TOUCH</h2>
                 <p>For enquiries or any questions please do not hesitate to contact us.</p>
 
-                <form>
+                <form method="POST" action="contact.php">
                     <div class="form-row">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="text" placeholder="Phone Number">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="text" name="number" placeholder="Phone Number">
                     </div>
-                    <input type="email" placeholder="E-Mail*" required>
-                    <input type="text" placeholder="What Are You Interested In*" required>
-                    <textarea placeholder="Type Your Message"></textarea>
+                    <input type="email" name="email" placeholder="E-Mail*" required>
+                    <input type="text" name="service" placeholder="What Are You Interested In*" required>
+                    <textarea name="message" placeholder="Type Your Message"></textarea>
                     <div class="checkbox-row">
-                        <input type="checkbox" id="policy">
+                        <input type="checkbox" name="policy" id="policy" required>
                         <label for="policy">By clicking the submit button, you agree to our <a href="#">privacy
                                 policy</a></label>
                     </div>
                     <button type="submit" class="submit-btn">Send <i class="fa-solid fa-arrow-right"></i></button>
                 </form>
+
             </div>
         </div>
     </section>
@@ -135,12 +136,14 @@
     <footer class="footer">
         <div class="footer-top">
             <h2>Subscribe for insights, service updates, and a closer look at the world</h2>
-            <div class="subscribe-box">
-                <input type="email" placeholder="Enter Your Email" />
-                <button>
-                    Send <span>&#8594;</span>
-                </button>
-            </div>
+            <form method="POST" action="email.php">
+                <div class="subscribe-box">
+                    <input type="email" name="email" placeholder="Enter Your Email" required />
+                    <button type="submit">
+                        Send <span>&#8594;</span>
+                    </button>
+                </div>
+            </form>
         </div>
 
         <div class="footer-middle">

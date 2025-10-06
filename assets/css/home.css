@@ -75,7 +75,7 @@
     font-weight: 600;
     padding: 0.4rem 1.2rem;
     border-radius: 8px 14px 14px 8px;
-    display: inline-block;
+    /* display: inline-block; */
     overflow: hidden;
     /* ensures the pseudo-element doesn't spill out */
 }
@@ -489,7 +489,7 @@
     font-weight: 400;
     padding: 4px 1.2rem;
     border-radius: 8px 14px 14px 8px;
-    display: inline-block;
+    /* display: inline-block; */
     overflow: hidden;
     /* keeps animated bg contained */
 }

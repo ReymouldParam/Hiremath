@@ -36,7 +36,7 @@
                 <a href="./portfolio.html" class="nav-link">Portfolio</a>
             </nav>
             <button class="contact-btn">
-            <a href="./contact.html" class="nav-link">Contact</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </header>
@@ -127,7 +127,6 @@
             </div>
         </div>
     </section>
-
     <!-- Portfolio Section -->
     <div class="portfolio-container">
         <h1 class="portfolio-title">Next.Js Development<br>Portfolio</h1>
@@ -180,7 +179,6 @@
             <button class="slick-next custom-arrow"></button>
         </div>
     </div>
-
     <!--  Our Services -->
     <div class="services-container">
         <div class="services-card">
@@ -203,17 +201,18 @@
             </div>
         </div>
     </div>
-
     <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-top">
             <h2>Subscribe for insights, service updates, and a closer look at the world</h2>
-            <div class="subscribe-box">
-                <input type="email" placeholder="Enter Your Email" />
-                <button>
-                    Send <span>&#8594;</span>
-                </button>
-            </div>
+            <form method="POST" action="email.php">
+                <div class="subscribe-box">
+                    <input type="email" name="email" placeholder="Enter Your Email" required />
+                    <button type="submit">
+                        Send <span>&#8594;</span>
+                    </button>
+                </div>
+            </form>
         </div>
 
         <div class="footer-middle">
@@ -254,6 +253,18 @@
             <p>Copyright 2025 xyz | All rights Reserved | Designed by ReyMould</p>
         </div>
     </footer>
+    <!-- WhatsApp Floating Icon -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/7093288864" target="_blank">
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+    </div>
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

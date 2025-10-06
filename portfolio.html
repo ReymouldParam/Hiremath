@@ -83,7 +83,6 @@
         </div>
 
     </div>
-
     <!-- Portfolio Section -->
     <section class="portfolio-section">
         <p class="section-heading">Our Portfolio</p>
@@ -196,7 +195,6 @@
             <img src="assets/images/horizontal-line.png" alt="line2" style="width: 100%;" />
         </div>
     </section>
-
     <!-- Clients section -->
     <section class="testimonial-section">
         <h2>What Our Clients Say</h2>
@@ -244,12 +242,14 @@
     <footer class="footer">
         <div class="footer-top">
             <h2>Subscribe for insights, service updates, and a closer look at the world</h2>
-            <div class="subscribe-box">
-                <input type="email" placeholder="Enter Your Email" />
-                <button>
-                    Send <span>&#8594;</span>
-                </button>
-            </div>
+            <form method="POST" action="email.php">
+                <div class="subscribe-box">
+                    <input type="email" name="email" placeholder="Enter Your Email" required />
+                    <button type="submit">
+                        Send <span>&#8594;</span>
+                    </button>
+                </div>
+            </form>
         </div>
 
         <div class="footer-middle">
@@ -290,6 +290,18 @@
             <p>Copyright 2025 xyz | All rights Reserved | Designed by ReyMould</p>
         </div>
     </footer>
+    <!-- WhatsApp Floating Icon -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/7093288864" target="_blank">
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+    </div>
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
 
     <script>
         function revealProjects() {
