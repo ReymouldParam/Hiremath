@@ -477,7 +477,7 @@
     position: relative;
     z-index: 4;
     /* Important: ensures child pseudo-elements can appear above */
-    height: 60vh;
+    /* height: 60vh; */
     padding: 5% 3% 0;
 }
 
@@ -584,6 +584,7 @@
     flex-direction: column;
     gap: 20px;
     color: white;
+    flex: 1;
 }
 
 .service-item {
