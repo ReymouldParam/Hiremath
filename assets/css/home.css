@@ -9,7 +9,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     padding-bottom: 40px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
 
 .section::before,
@@ -389,51 +389,49 @@
 
 .image-collage-grid {
     display: grid;
-    grid-template-columns: 0.55fr 1fr;
-    grid-template-rows: 1fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 1rem;
-    max-width: 420px;
-    height: 280px;
-}
-
-/* Shared */
-.image-container-tall,
-.image-container-small {
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 480px;
+    height: 320px;
     position: relative;
 }
 
-/* Left tall image – rounded more on left side */
-.image-container-tall {
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
-    border-radius: 28px 0 0 28px;
+/* Shared container styles */
+.image-container {
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 18px;
+    position: relative;
 }
 
-/* Top-right – oval shape (all corners rounded strongly) */
-.image-container-small.top-right {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    border-radius: 40px;
-}
-
-/* Bottom-right – only bottom corners rounded (pill-like) */
-.image-container-small.bottom-right {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    align-self: end;
-    height: 85%;
-    border-radius: 0 0 40px 40px;
-}
-
-.image-container-tall img,
-.image-container-small img {
+.image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     border-radius: inherit;
+}
+
+/* Left tall image */
+.image-container.tall {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    border-radius: 22px;
+}
+
+/* Top-right image */
+.image-container.small.top {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    border-radius: 20px;
+}
+
+/* Bottom-right image */
+.image-container.small.bottom {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    border-radius: 20px;
 }
 
 /* Floating animation */
@@ -468,30 +466,32 @@
 
 /* ******************** Our Story Section ******************** */
 .section2 {
-    background-image: url('../images/aboutus-bg.png');
-    /* background-position: center; */
+    background-image: url(../images/aboutus-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    /* align-items: center; */
-    padding: 3% 3%;
     justify-content: space-between;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     margin-top: -2%;
-    z-index: 2;
     position: relative;
+    z-index: 4;
+    /* Important: ensures child pseudo-elements can appear above */
+    height: 60vh;
+    padding: 5% 3% 0;
 }
 
+/* Highlighted animated text */
 .title-highlight-blue {
     position: relative;
     color: #fff;
     font-weight: 400;
     padding: 4px 1.2rem;
     border-radius: 8px 14px 14px 8px;
-    /* display: inline-block; */
-    overflow: hidden;
-    /* keeps animated bg contained */
+    display: inline-block;
+    /* overflow: hidden; */
+    z-index: 1;
+    /* must be positive to stay above section background */
 }
 
 /* animated background only */
@@ -499,14 +499,15 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: #323EC3;
+    background: linear-gradient(90deg, #7d2fff, #2eb9ff);
     border-radius: inherit;
     z-index: -1;
     transform-origin: center;
     animation: waveSide 6s infinite ease-in-out;
+    opacity: 1;
 }
 
-/* same keyframes for smooth background wave */
+/* smooth background wave animation */
 @keyframes waveSide {
     0% {
         transform: rotate(0deg) skewX(0deg);
@@ -573,7 +574,8 @@
     justify-content: space-between;
     height: fit-content;
     align-items: flex-start;
-    padding: 4%;
+    padding: 2%;
+    z-index: 1;
 }
 
 /* ===== Left Side (Services List) ===== */
@@ -591,7 +593,7 @@
     font-size: 18px;
     border: 1px solid transparent;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.05);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -695,8 +697,9 @@
 
 .services-image img.active {
     opacity: 1;
-    transform: scale(0.8);
-    z-index: 2;
+    transform: scale(0.95);
+    z-index: 0;
+    width: 100%;
 }
 
 /* ===== Section Layout ===== */
@@ -709,139 +712,111 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 4% 4%;
-    /* background: linear-gradient(to bottom, #1a0b2e, #0c0c0c); */
 }
 
 /* ===== Left Content ===== */
 .tech-content {
     flex: 1;
-    margin-right: 50px;
-    padding: 2%;
+    padding-right: 60px;
 }
 
 .tech-content h4 {
-    color: white;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #cfc9ff;
 }
 
 .tech-content h2 {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 1.3;
     font-weight: 400;
-    margin-bottom: 20px;
-    color: white;
+    margin-bottom: 24px;
+    color: #fff;
 }
 
-.highlight {
+.title-highlight-blue {
     display: inline-block;
-    background: linear-gradient(to right, #7d2fff, #2eb9ff);
-    padding: 4px 8px;
-    border-radius: 6px;
+    background: linear-gradient(90deg, #7d2fff, #2eb9ff);
+    padding: 4px 10px;
+    border-radius: 14px;
     color: #fff;
+    font-weight: 500;
 }
 
 .tech-content p {
     font-size: 16px;
-    color: #bbb;
+    color: #c9c9c9;
+    max-width: 520px;
     margin-bottom: 30px;
 }
 
+/* Gradient Arrow Button */
 .arrow-btn {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    background: linear-gradient(to right, #7d2fff, #2eb9ff);
+    background: linear-gradient(135deg, #7d2fff, #2eb9ff);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
     cursor: pointer;
-    margin-left: 15px;
-    color: white;
+    transition: 0.3s ease;
+}
+
+.arrow-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(125, 47, 255, 0.5);
 }
 
 .arrow-btn i {
     transform: rotate(-45deg);
-    /* rotate only the arrow */
-    display: inline-block;
 }
-
 
 /* ===== Right Code Section ===== */
 .code-editor {
-    flex: 1.2;
+    flex: 1.1;
     background: #111;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid #7800E2;
 }
 
-/* Tabs at top */
+/* Tabs */
 .tab-buttons {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .tab-buttons button {
-    padding: 8px 16px;
+    padding: 8px 18px;
     border: none;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
     color: #fff;
     cursor: pointer;
     font-size: 14px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .tab-buttons button:hover,
 .tab-buttons button.active {
-    background: linear-gradient(to right, #7d2fff, #2eb9ff);
+    background: linear-gradient(90deg, #7d2fff, #2eb9ff);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 /* Code Window */
 .code-window {
-    background: #1c1c1c;
-    padding: 20px;
+    /* background: #1c1c1c; */
     border-radius: 10px;
-    font-family: "Fira Code", monospace;
-    font-size: 14px;
-    color: #fff;
-    overflow-x: auto;
-    line-height: 1.6;
-}
-
-/* Syntax Highlight */
-.keyword {
-    color: #ff79c6;
-}
-
-.import {
-    color: #50fa7b;
-}
-
-.string {
-    color: #f1fa8c;
-}
-
-.function {
-    color: #8be9fd;
-}
-
-.boolean {
-    color: #bd93f9;
-}
-
-.comment {
-    color: #6272a4;
-}
-
-
-.code-window {
+    /* overflow: hidden; */
     position: relative;
-    width: 100%;
-    height: 260px;
+    height: 280px;
 }
 
 .code-window img {
@@ -849,16 +824,32 @@
     top: 0;
     left: 0;
     max-width: 100%;
+    height: 100%;
     border-radius: 10px;
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.97);
     transition: all 0.6s ease;
+    object-fit: cover;
 }
 
 .code-window img.active {
     opacity: 1;
     transform: scale(1);
     z-index: 2;
+}
+
+/* Small glowing gradient border effect */
+.code-editor::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #7d2fff, #2eb9ff);
+    z-index: -1;
+    opacity: 0.2;
 }
 
 
@@ -914,6 +905,8 @@
     width: 100%;
     border-radius: 15%;
     margin-bottom: 15px;
+    height: 350px;
+    object-fit: cover;
 }
 
 .portfolio-card h3 {

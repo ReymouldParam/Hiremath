@@ -63,7 +63,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.nav-link:hover,
 .nav-link.active {
     background: #0c1120;
     color: #fff;
@@ -330,7 +329,7 @@ body {
 
 /********************* whatsapp container */
 .whatsapp-container {
-    position: sticky;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     width: 60px;
@@ -346,7 +345,7 @@ body {
 
 .whatsapp-container i {
     font-size: 48px;
-    color: #323EC3;
+    color: #25D366;
     justify-content: flex-end;
     animation: whatsappbeat 1.5s infinite;
     transition: transform 0.3s ease;
