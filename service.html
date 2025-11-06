@@ -97,34 +97,32 @@
         <!-- Tabs -->
         <div class="tech-tabs">
             <button class="tech-tab active" data-skill="next">Web Development</button>
-            <button class="tech-tab" data-skill="react">Mobile Development</button>
-            <button class="tech-tab" data-skill="vue">Software Development</button>
-            <button class="tech-tab" data-skill="angular">test</button>
-            <!-- <button class="tech-tab" data-skill="svelte">SvelteKit</button> -->
+            <button class="tech-tab" data-skill="react">Webflow Development</button>
+            <button class="tech-tab" data-skill="vue">App Modernization</button>
+            <button class="tech-tab" data-skill="angular">IT Consulting Services</button>
+            <button class="tech-tab" data-skill="staffing">Staffing Services</button>
+            <button class="tech-tab" data-skill="svelte">Placement Services</button>
+
         </div>
 
         <!-- Content -->
         <div class="tech-content">
             <!-- Code Image Card -->
             <div class="code-card">
-                <div class="code-header">
-                    <span>snippet.js</span>
-                </div>
-                <div class="code-body">
-                    <img id="tech-image" src="assets/images/nextjs.png" alt="NextJS Code">
+                <div>
+                    <img id="tech-image" src="assets/images/WEB-DEVELOPMENT.jpg" alt="NextJS Code">
                 </div>
             </div>
 
             <!-- Text -->
             <div class="tech-text">
-                <h2 id="tech-title">
-                    Crafting <span>Lightning Fast Web</span><br> Experiences With Next.Js
-                </h2>
+                <h2 id="tech-title">Build Powerful Websites That Drive Growth and Engagement</h2>
                 <p id="tech-desc">
-                    With strong expertise in Next.js, I specialize in building fast, scalable,
-                    and SEO-friendly web applications tailored to modern business needs.
-                    My focus lies in creating high-performance user experiences through optimized
-                    server-side rendering, static site generation, and API integration.
+                    We develop fast, secure, and responsive websites that deliver seamless user experiences and
+                    measurable results. Our focus is on performance, usability, and scalability—ensuring your website
+                    stands strong in a competitive digital world. From landing pages to enterprise portals, we build
+                    solutions tailored to your goals. Every line of code is optimized to reflect your brand’s strength
+                    and reliability.
                 </p>
             </div>
         </div>
@@ -306,31 +304,37 @@
         $(document).ready(function () {
             const content = {
                 next: {
-                    img: "assets/images/nextjs.png",
-                    title: 'Crafting <span>Lightning Fast Web</span><br> Experiences With Next.Js',
-                    desc: "With strong expertise in Next.js, I specialize in building fast, scalable, and SEO-friendly web applications tailored to modern business needs. My focus lies in creating high-performance user experiences through optimized server-side rendering, static site generation, and API integration."
+                    img: "assets/images/WEB-DEVELOPMENT.jpg",
+                    title: 'Build Powerful Websites That Drive Growth and Engagement',
+                    desc: "We develop fast, secure, and responsive websites that deliver seamless user experiences and measurable results. Our focus is on performance, usability, and scalability—ensuring your website stands strong in a competitive digital world. From landing pages to enterprise portals, we build solutions tailored to your goals. Every line of code is optimized to reflect your brand’s strength and reliability."
                 },
                 react: {
-                    img: "assets/images/react.png",
-                    title: 'Building <span>Dynamic UI</span><br> With React',
-                    desc: "React allows me to build highly interactive and modular user interfaces. I focus on component-driven architecture, state management, and performance optimization to deliver smooth and scalable front-end solutions."
+                    img: "assets/images/WWEBFLOW-DEVELOPMENT.jpg",
+                    title: 'Design Dynamic, No-Code Websites That Convert and Inspire',
+                    desc: "We design and build stunning, high-performance websites using Webflow, blending creativity with precision. Our Webflow experts transform your vision into responsive, interactive, and easy-to-manage websites without compromising speed or SEO. We craft every layout to engage users and drive conversions. Experience the power of design and technology in one platform."
                 },
                 vue: {
-                    img: "assets/images/vue.png",
-                    title: 'Creating <span>Flexible Apps</span><br> With Vue.js',
-                    desc: "Vue.js offers simplicity and flexibility for building responsive web apps. I use Vue for projects that require fast setup, smooth learning curve, and reactive UI with a balance of speed and performance."
+                    img: "assets/images/APP-MODERIZATION.jpg",
+                    title: 'Transform Legacy Systems Into Future-Ready Digital Powerhouses',
+                    desc: "We modernize outdated applications into agile, cloud-ready, and future-proof digital systems. By leveraging the latest frameworks and migration strategies, we enhance your app’s performance, security, and scalability. Our modernization approach reduces maintenance costs and accelerates innovation. Transform legacy software into a powerful business enabler that meets today’s demands."
                 },
                 angular: {
-                    img: "assets/images/angular.png",
-                    title: 'Delivering <span>Enterprise Solutions</span><br> With Angular',
-                    desc: "Angular provides a powerful framework for building enterprise-grade applications. I specialize in building structured, scalable, and maintainable apps with Angular’s robust features and TypeScript support."
+                    img: "assets/images/IT-SERVICES.jpg",
+                    title: 'Empowering Businesses Through Strategic Technology Consulting',
+                    desc: "We provide expert IT consulting that aligns technology with your business vision. From system architecture to process automation, we help organizations design efficient, secure, and scalable IT infrastructures. Our consultants guide you through every stage of digital transformation. With data-driven insights and proven strategies, we ensure smarter decisions and sustainable growth."
+                },
+                staffing: {
+                    img: "assets/images/staffing.jpg",
+                    title: 'Build the Right Team to Scale With Confidence',
+                    desc: "We deliver end-to-end staffing solutions that connect you with the right talent—fast and effectively. Our team identifies, screens, and places professionals who match your technical and cultural needs. Whether it’s permanent, contract, or project-based hiring, we ensure you build strong, skilled teams. Empower your workforce with the expertise that drives success."
                 },
                 svelte: {
-                    img: "assets/images/svelte.png",
-                    title: 'Crafting <span>Ultra-Fast Apps</span><br> With SvelteKit',
-                    desc: "SvelteKit allows me to build ultra-fast and optimized apps with minimal overhead. I leverage its compile-time magic for smooth performance, small bundle sizes, and modern web experiences."
+                    img: "assets/images/PLACEMENT-SERVICES.jpg",
+                    title: 'Connecting Talent and Opportunity for Mutual Growth',
+                    desc: "We bridge the gap between skilled professionals and top organizations through our reliable placement services. Our approach goes beyond recruitment—we focus on matching career aspirations with business objectives. From fresh graduates to experienced professionals, we help candidates find the right opportunities. Together, we create pathways for growth, productivity, and long-term success."
                 }
             };
+
 
             $(".tech-tab").on("click", function () {
                 $(".tech-tab").removeClass("active");
