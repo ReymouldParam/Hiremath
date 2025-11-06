@@ -574,7 +574,7 @@
     font-size: 16px;
     line-height: 1.7;
     color: #d1d5db;
-    max-width: 550px;
+    width: 100%;
 }
 
 /***************** Fade effect */
