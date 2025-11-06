@@ -1381,6 +1381,7 @@
     .container {
         margin: 15px auto;
         padding-top: 3%;
+        height: 100%;
     }
 
     .about-left h1 {
