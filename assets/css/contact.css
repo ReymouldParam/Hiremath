@@ -38,7 +38,9 @@ body {
     white-space: nowrap;
     /* border-bottom: 1px solid #eee; */
     margin-bottom: 20px;
+    margin-top: 20px;
 }
+
 
 .marquee-content {
     display: inline-block;

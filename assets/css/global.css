@@ -232,7 +232,7 @@ body {
 /* Project CTA */
 .project-cta {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
 }
 

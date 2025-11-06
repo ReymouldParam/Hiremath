@@ -133,39 +133,45 @@
     <section class="services-section">
         <!-- Left Side -->
         <div class="services-list">
-            <div class="service-item">
+            <div class="service-item" data-title="Build Fast, Secure Websites"
+                data-description="We design and develop modern, scalable websites to enhance your brand visibility and drive better engagement.">
                 <div class="service-icon"><img src="./assets/images/coding.svg" alt="coding-img" /></div>
                 <div class="service-content">
                     <h3>Web Development</h3>
                     <p>We build fast, secure, and scalable websites that strengthen your brand’s online presence and
-                        deliver seamless user experiences across all devices
-                    </p>
+                        deliver seamless user experiences across all devices.</p>
                 </div>
             </div>
-            <div class="service-item active">
+
+            <div class="service-item active" data-title="No-Code Webflow Magic"
+                data-description="We craft stunning Webflow websites with responsive layouts, animations, and seamless user experiences — ready to go live fast.">
                 <div class="service-icon"><img src="./assets/images/computer-screen.svg" alt="computer-screen" /></div>
                 <div class="service-content">
                     <h3>Webflow Development</h3>
-                    <p> We craft visually stunning, no-code Webflow websites with responsive design, smooth animations,
-                        and quick launch timelines to help your business go live faster</p>
+                    <p>We craft visually stunning, no-code Webflow websites with responsive design, smooth animations,
+                        and quick launch timelines to help your business go live faster.</p>
                 </div>
             </div>
-            <div class="service-item">
+
+            <div class="service-item" data-title="Modernize Legacy Apps"
+                data-description="Upgrade your legacy applications with modern technology for improved performance, scalability, and user experience.">
                 <div class="service-icon"><img src="./assets/images/mobile-development.svg" alt="mobile-developemnt" />
                 </div>
                 <div class="service-content">
                     <h3>App Modernization</h3>
-                    <p> We upgrade and optimize your legacy applications with the latest technologies, improving
-                        performance, scalability, and user experience for modern business needs</p>
+                    <p>We upgrade and optimize your legacy applications with the latest technologies, improving
+                        performance, scalability, and user experience for modern business needs.</p>
                 </div>
             </div>
-            <div class="service-item">
+
+            <div class="service-item" data-title="Strategic IT Consulting"
+                data-description="We streamline your technology infrastructure with expert consulting to enhance efficiency and align with your business goals.">
                 <div class="service-icon"><img src="./assets/images/quality-assurance.svg" alt="quality-assurance" />
                 </div>
                 <div class="service-content">
                     <h3>IT Consulting Services</h3>
-                    <p> We provide expert IT consulting to streamline your technology infrastructure, enhance
-                        efficiency, and align digital strategies with your business goals</p>
+                    <p>We provide expert IT consulting to streamline your technology infrastructure, enhance
+                        efficiency, and align digital strategies with your business goals.</p>
                 </div>
             </div>
         </div>
@@ -173,19 +179,19 @@
         <!-- Right Side -->
         <div class="services-content">
             <h4>Our Services</h4>
-            <h2>
-                Streamline Your Project To <br>
-                Enter The Market And Scale <br>
-                <span class="title-highlight-blue">Successfully</span>
+            <h2 id="service-title">
+                No-Code Webflow Magic
             </h2>
-            <p>
-                Our mission is to align technology with your goals so you achieve efficiency,
-                scalability, and sustainable growth.
+            <p id="service-description">
+                We craft stunning Webflow websites with responsive layouts, animations, and seamless user experiences —
+                ready to go live fast.
             </p>
+
             <div style="display: flex; justify-content: space-between;">
                 <div class="arrow-btn">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
+
                 <!-- Images -->
                 <div class="services-image">
                     <img src="assets/images/our-story-img1.png" alt="Web Development">
@@ -196,6 +202,7 @@
             </div>
         </div>
     </section>
+
     <!-- Section 4 -->
     <section class="technologies-section">
         <!-- Left Content -->
@@ -433,18 +440,34 @@
 
             let $items = $(".service-item");
             let $images = $(".services-image img");
+            let $title = $("#service-title");
+            let $desc = $("#service-description");
+
             let current = 0;
             let total = $items.length;
 
-            // Initialize
+            // Function to show the selected service
             function showSlide(index) {
                 $items.removeClass("active").eq(index).addClass("active");
                 $images.removeClass("active").eq(index).addClass("active");
+
+                // Change heading and paragraph dynamically
+                let newTitle = $items.eq(index).data("title");
+                let newDesc = $items.eq(index).data("description");
+
+                // Animate text changes
+                $title.fadeOut(300, function () {
+                    $(this).text(newTitle).fadeIn(300);
+                });
+                $desc.fadeOut(300, function () {
+                    $(this).text(newDesc).fadeIn(300);
+                });
             }
 
+            // Initialize first item
             showSlide(current);
 
-            // Auto cycle
+            // Auto cycle every 3 seconds
             setInterval(function () {
                 current = (current + 1) % total;
                 showSlide(current);
@@ -458,6 +481,7 @@
 
         });
     </script>
+
     <!-- technologis js -->
     <script>
         $(document).ready(function () {
