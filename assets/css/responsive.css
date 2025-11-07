@@ -142,11 +142,7 @@
         margin: 0.2rem 0;
     }
 
-    .title-results {
-        position: static;
-        display: block;
-        margin-top: 6px;
-    }
+
 
     .bottom-section {
         flex-direction: column;
@@ -156,34 +152,8 @@
         text-align: center;
     }
 
-    .results-wrapper {
-        order: -1;
-        margin-bottom: 8px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-
-    .results-bg {
-        width: 100%;
-        max-width: 320px;
-        height: 56px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .rotating-text {
-        font-size: 20px;
-        font-weight: 600;
-        padding: 0.2rem 0.8rem;
-    }
-
     .scroll-btn {
-        left: 50%;
+        left: 7%;
         bottom: 12px;
         transform: translateX(-50%);
         width: 50px;
@@ -192,6 +162,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: -10px;
     }
 
     .scroll-btn svg {
@@ -904,24 +875,6 @@
         gap: 24px;
     }
 
-    .results-bg {
-        width: 420px;
-        height: 70px;
-        margin-left: 0;
-    }
-
-    .rotating-text {
-        font-size: 30px;
-    }
-
-    .scroll-btn {
-        left: 70%;
-        top: 100%;
-        transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
-    }
-
     .section2 {
         padding: 40px 24px;
         align-items: center;
@@ -1205,14 +1158,6 @@
         font-size: 2.2rem;
     }
 
-    .results-bg {
-        margin-left: 0%;
-    }
-
-    .scroll-btn {
-        left: 52%;
-    }
-
     .services-content h2 {
         font-size: 34px;
         font-weight: 400;
@@ -1297,19 +1242,7 @@
         font-size: 2.6rem;
     }
 
-    .results-bg {
-        width: 420px;
-        height: 80px;
-        margin-left: 0;
-    }
 
-    .rotating-text {
-        font-size: 42px;
-    }
-
-    .scroll-btn {
-        left: 75%;
-    }
 
     .services-image {
         height: 300px;
