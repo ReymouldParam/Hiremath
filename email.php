@@ -3,10 +3,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Collect email input
     $email = trim($_POST['email']);
     // Recipient email(s)
-    $to = "samhiremath@hcsamerica.org";
+    $to = "samhiremath@hcsamerica.org, hr@hiremathconsulting.com";
 
     // Email subject and body
-    $subject = "Email enquiry from Hygenixseeds.com website";
+    $subject = "Email enquiry from Hiremath website";
     $body = "Email: $email";
     // Send email
     $emailSent = mail($to, $subject, $body);

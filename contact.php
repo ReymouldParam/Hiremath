@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $policyAccepted = isset($_POST['policy']);
 
     // Recipient
-    $to = "naresh.narnapati@reymould.com";
+    $to = "samhiremath@hcsamerica.org, hr@hiremathconsulting.com";
 
     // Subject
     $subject = "Email Enquiry from hiremath website";
