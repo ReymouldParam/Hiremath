@@ -827,6 +827,7 @@
     .services-description {
         font-size: 14px;
         max-width: none;
+        width: 85%;
     }
 
     .services-image {
