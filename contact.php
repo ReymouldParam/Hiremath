@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Collect data from form
+
+    // Collect data
     $name = trim($_POST['name']);
     $number = trim($_POST['number']);
     $email = trim($_POST['email']);
@@ -8,24 +9,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = trim($_POST['message']);
     $policyAccepted = isset($_POST['policy']);
 
-    // Validate required fields
-    if (!$name || !$email || !$service || !$policyAccepted) {
-        header("Location: contact.html?emailSuccess=false&error=missing_fields");
-        exit;
-    }
+    // Recipient
+    $to = "naresh.narnapati@reymould.com";
 
-    // Recipient email
-    $to = "reymould.social@gmail.com";
-
-    // Email subject and body
+    // Subject
     $subject = "Email Enquiry from hiremath website";
-    $body = "Name: $name\n"
-        . "Email: $email\n"
-        . "Phone: $number\n"
-        . "Service Interested: $service\n"
-        . "Message:\n$message";
-    // Send the email
-    if (mail($to, $subject, $body, $headers)) {
+
+    // Body
+    $body = "Name: $name\n";
+    $body .= "Email: $email\n";
+    $body .= "Phone: $number\n";
+    $body .= "Service Interested: $service\n\n";
+    $body .= "Message:\n$message";
+
+    // Send email (no headers, like your working version)
+    $emailSent = mail($to, $subject, $body);
+
+    // Redirect based on result
+    if ($emailSent) {
         header("Location: contact.html?emailSuccess=true");
     } else {
         header("Location: contact.html?emailSuccess=false");

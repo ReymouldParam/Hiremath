@@ -92,7 +92,7 @@
                     <i class="fa-solid fa-phone-volume"></i>
                     <div>
                         <p>Call Anytime</p>
-                        <span>+91 7890 337 577</span>
+                        <span>+1 (815) 793-1174</span>
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@
                     <i class="fa-solid fa-envelope"></i>
                     <div>
                         <p>Send Mail Here</p>
-                        <span>12455@zxxd</span>
+                        <span>Samhiremath@hcsamerica.org</span>
                     </div>
                 </div>
 
@@ -188,6 +188,12 @@
                 2026 | All rights Reserved | Designed by ReyMould</p>
         </div>
     </footer>
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
 
     <!-- Slick Carousel JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -210,8 +216,6 @@
         });
     </script>
     <script src="assets/header.js"></script>
-    <!-- Character Counter -->
-
     <!-- Character Counter Script -->
     <script>
         const textarea = document.getElementById('message');
@@ -228,7 +232,41 @@
             counter.classList.toggle('limit', typed >= max - 20);
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const flagValue = urlParams.get('emailSuccess');
+            const popupMessage = document.getElementById("popup-message");
+            const popupHeading = document.getElementById("popup-heading");
+            const popupPara = document.getElementById("popup-para");
+            const closePopup = document.getElementById("close-popup");
 
+            if (flagValue === 'true') {
+                popupHeading.innerHTML = "EMAIL SENT SUCCESSFULLY";
+                popupPara.innerHTML = "Thank you for your interest. We will get back to you shortly.";
+                popupMessage.style.display = "block";
+
+
+            } else if (flagValue === 'false') {
+                popupHeading.innerHTML = "EMAIL NOT SENT";
+                popupPara.innerHTML = "There was an error sending your message. Please try again later.";
+                popupMessage.style.display = "block";
+
+            }
+
+            closePopup.addEventListener("click", function () {
+                popupMessage.style.display = "none";
+
+
+            });
+
+            // Get the current URL without the query parameters
+            const baseUrl = window.location.href.split('?')[0];
+
+            // Replace the current state with a new state without the query parameters
+            history.replaceState(null, null, baseUrl);
+        });
+    </script>
 </body>
 
 </html>
