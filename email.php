@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Recipient email(s)
-    $to = "reymould.social@gmail.com";
+    $to = "Samhiremath@hcsamerica.org";
 
     // Email subject and body
     $subject = "Email enquiry from Hygenixseeds.com website";
