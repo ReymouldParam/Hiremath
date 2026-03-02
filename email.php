@@ -2,26 +2,19 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Collect email input
     $email = trim($_POST['email']);
-
-    // Basic validation
-    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: index.html?emailSuccess=false&error=invalid_email");
-        exit;
-    }
-
     // Recipient email(s)
-    $to = "Samhiremath@hcsamerica.org";
+    $to = "samhiremath@hcsamerica.org";
 
     // Email subject and body
     $subject = "Email enquiry from Hygenixseeds.com website";
     $body = "Email: $email";
     // Send email
-    $emailSent = mail($to, $subject, $body, $headers);
+    $emailSent = mail($to, $subject, $body);
     // Redirect with result
     if ($emailSent) {
-        header("Location: index.html?emailSuccess=true");
+        header("Location: contact.html?emailSuccess=true");
     } else {
-        header("Location: index.html?emailSuccess=false");
+        header("Location: contact.html?emailSuccess=false");
     }
     exit;
 }
